@@ -39,3 +39,11 @@
 .sidebar ul li:hover a {
     color: #fff;
 }
+
+.sidebar ul li.active a {
+   color: #fff;
+}
+
+.sidebar ul li.active {
+    background-color: #594f8d;
+}

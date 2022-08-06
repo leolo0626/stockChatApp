@@ -8,6 +8,7 @@ import { AppRoutesModule } from './app-routes.module';
 import { HomePageComponent } from './home-page/home-page.component';
 import { HeaderBarComponent } from './header-bar/header-bar.component';
 import { TickerCardForHeaderBarComponent } from './ticker-card-for-header-bar/ticker-card-for-header-bar.component';
+import { ProfilePageComponent } from './profile-page/profile-page.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { TickerCardForHeaderBarComponent } from './ticker-card-for-header-bar/ti
     NavBarComponent,
     HomePageComponent,
     HeaderBarComponent,
-    TickerCardForHeaderBarComponent
+    TickerCardForHeaderBarComponent,
+    ProfilePageComponent
   ],
   imports: [
     BrowserModule,
