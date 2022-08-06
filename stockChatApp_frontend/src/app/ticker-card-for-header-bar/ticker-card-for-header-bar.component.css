@@ -1,0 +1,17 @@
+.ticker {
+    border-radius: 0.5rem;
+    border-color:black;
+    padding: 10px 16px;
+    display: flex;
+    flex-direction: row;
+    background-color: aquamarine;
+    margin-left:3px;
+    font-size: .938rem;
+    white-space: nowrap;
+}
+
+.separator {
+    width : 0.25rem;
+}
+
+

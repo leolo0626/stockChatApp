@@ -1,0 +1,20 @@
+.app-container {
+    display: flex;
+    position: relative;
+}
+
+.main-container {
+    width: 100%;
+    margin-left: 200px;
+}
+
+.main-container .center {
+    border: 5px solid #FFFF00;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container .header {
+    padding: 20px;
+    border-bottom: 1px solid #e0e4e8;
+}

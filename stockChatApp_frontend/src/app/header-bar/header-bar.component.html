@@ -1,0 +1,18 @@
+<div class="header-bar">
+    <div class="ticker-bar" >
+        <div  *ngFor="let stock of stocks; index as i" >
+            <app-ticker-card-for-header-bar [stock]="stock"> </app-ticker-card-for-header-bar>
+        </div>    
+    </div>
+    <div class="ticker-bar">
+        <div  *ngFor="let stock of stocks; index as i" >
+            <app-ticker-card-for-header-bar [stock]="stock"> </app-ticker-card-for-header-bar>
+        </div>  
+    </div>
+    <div class="ticker-bar">
+        <div  *ngFor="let stock of stocks; index as i" >
+            <app-ticker-card-for-header-bar [stock]="stock"> </app-ticker-card-for-header-bar>
+        </div>      
+    </div>
+</div>
+
