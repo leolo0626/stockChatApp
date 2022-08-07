@@ -9,6 +9,11 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { HeaderBarComponent } from './header-bar/header-bar.component';
 import { TickerCardForHeaderBarComponent } from './ticker-card-for-header-bar/ticker-card-for-header-bar.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MaterialExampleModule} from './material.module';
+import { AvatarModule } from 'ngx-avatar';
+import { SocialMediaPostCardComponentComponent } from './social-media-post-card-component/social-media-post-card-component.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,12 +22,17 @@ import { ProfilePageComponent } from './profile-page/profile-page.component';
     HomePageComponent,
     HeaderBarComponent,
     TickerCardForHeaderBarComponent,
-    ProfilePageComponent
+    ProfilePageComponent,
+    SocialMediaPostCardComponentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AppRoutesModule
+    AppRoutesModule,
+    BrowserAnimationsModule,
+    MaterialExampleModule,
+    HttpClientModule,
+    AvatarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
