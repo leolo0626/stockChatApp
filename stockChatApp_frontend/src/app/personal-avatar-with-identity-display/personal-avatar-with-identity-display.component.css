@@ -1,0 +1,40 @@
+ngx-avatar{
+    display:inline-block;
+    background-color: white;
+   
+}
+
+.wrapped-avatar{
+    display: flex;
+	flex-direction: row;
+}
+
+
+.post-identifier {
+	padding-top: 0.5rem;
+}
+
+.post-identifier p {
+    margin-bottom: 0.25rem;
+    margin-left:1rem;
+}
+
+.post-author-link {
+	color: #3f8bef;
+	font-weight: bold;
+	text-decoration: none;
+	transition: color 64ms ease-out;
+
+}
+
+.post-author-link:hover {
+    color: #1f6bcf;
+}
+
+.margin-left-half {
+	margin-left: 0.5rem !important;
+}
+
+.margin-left-quarter {
+	margin-left: 0.25rem !important;
+}

@@ -1,0 +1,22 @@
+.comment-container {
+	width: 100%;
+	padding: 1.2rem 0.75rem;
+	border-bottom: solid 1px #dadada;
+	box-sizing: border-box;
+}
+
+.comment-top {
+	padding-bottom: 0.5rem;
+	display: flex;
+}
+
+.comment-top .post-avatar {
+        width: 1rem;
+        height: 1rem;
+}
+
+.comment-top .post-identifier{
+    padding-top: 0;
+    padding-left: 0.5rem;
+    color:#8a8a8a;
+}

@@ -14,6 +14,8 @@ import {MaterialExampleModule} from './material.module';
 import { AvatarModule } from 'ngx-avatar';
 import { SocialMediaPostCardComponentComponent } from './social-media-post-card-component/social-media-post-card-component.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PersonalAvatarWithIdentityDisplayComponent } from './personal-avatar-with-identity-display/personal-avatar-with-identity-display.component';
+import { SocialMediaPostCardCommentComponentComponent } from './social-media-post-card-comment-component/social-media-post-card-comment-component.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderBarComponent,
     TickerCardForHeaderBarComponent,
     ProfilePageComponent,
-    SocialMediaPostCardComponentComponent
+    SocialMediaPostCardComponentComponent,
+    PersonalAvatarWithIdentityDisplayComponent,
+    SocialMediaPostCardCommentComponentComponent
   ],
   imports: [
     BrowserModule,
