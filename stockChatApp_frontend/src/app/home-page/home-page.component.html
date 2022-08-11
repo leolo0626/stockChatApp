@@ -10,10 +10,11 @@
       
       <mat-tab-group animationDuration="0ms">
         <mat-tab label="Home">
-            <app-social-media-post-card-component></app-social-media-post-card-component>
-            <app-social-media-post-card-component></app-social-media-post-card-component>
-            <app-social-media-post-card-component></app-social-media-post-card-component>
-            <app-social-media-post-card-component></app-social-media-post-card-component>
+          <div *ngFor="let post of posts; index as i">
+            <app-social-media-post-card-component
+              [post]="post"
+            ></app-social-media-post-card-component>
+          </div>
         </mat-tab>
         <mat-tab label="Following">Following</mat-tab>
         <!-- <mat-tab label="Third">Content 3</mat-tab> -->

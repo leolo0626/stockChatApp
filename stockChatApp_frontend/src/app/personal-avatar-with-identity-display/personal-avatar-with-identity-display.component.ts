@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Person } from '../model/person';
 
 @Component({
   selector: 'app-personal-avatar-with-identity-display',
@@ -9,6 +10,10 @@ export class PersonalAvatarWithIdentityDisplayComponent implements OnInit {
 
   
   @Input() public avatarFigureSize: number = 80;
+  @Input() public person: Person;
+  @Input() public createdAt: Date;
+
+
   constructor() { }
 
   ngOnInit(): void {

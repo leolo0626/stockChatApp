@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Post } from '../model/post';
 
 @Component({
   selector: 'app-social-media-post-card-component',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SocialMediaPostCardComponentComponent implements OnInit {
 
+  @Input() public post: Post; 
+  
   constructor() { }
+
 
   ngOnInit(): void {
   }
