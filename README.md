@@ -1,3 +1,3 @@
 # stockChatApp
 For learning purpose
-![Gif](https://user-images.githubusercontent.com/46132312/183248235-b5c5ac2d-a3d6-4ebe-966a-48f836130a72.gif)
+![Gif](https://user-images.githubusercontent.com/46132312/184191092-ce46a025-100b-4056-b195-5106c6b68d33.gif)
