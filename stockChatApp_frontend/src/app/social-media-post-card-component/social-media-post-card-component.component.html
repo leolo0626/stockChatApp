@@ -31,7 +31,8 @@
         </div>
         <div>
             <button
-            class="post-button">
+            class="post-button"
+            (click)="loadComments()">
             <i class="far fa-comment"></i>
             <span>Comment</span>
         </button>
@@ -49,9 +50,25 @@
     <!-- Comment Session -->
     <!-- Your comment session -->
     <!-- Other Peoples' comment -->
-    <!-- <app-social-media-post-card-comment-component></app-social-media-post-card-comment-component>
-    <app-social-media-post-card-comment-component></app-social-media-post-card-comment-component>
-    <app-social-media-post-card-comment-component></app-social-media-post-card-comment-component> -->
+    <div class="comment-input">
+        <app-personal-avatar-with-identity-display
+        [person]="post.person"
+        [avatarFigureSize]="50"
+        [isPostIdentifierHidden]="true"
+        ></app-personal-avatar-with-identity-display>
+        <textarea
+            class="text-comment"
+            placeholder="Write your comment here..."></textarea>
+        <button class="send-button">
+            <i class="fas fa-paper-plane"></i>
+        </button>
+    </div>
+    <div *ngFor="let comment of post.comments; index as i ">
+        <app-social-media-post-card-comment-component
+            [comment]="comment"
+        ></app-social-media-post-card-comment-component>
+    </div>
+
 
 
 </article>

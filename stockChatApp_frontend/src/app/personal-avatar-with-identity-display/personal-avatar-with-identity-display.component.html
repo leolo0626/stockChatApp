@@ -5,7 +5,7 @@
        name="Haithem Mosbahi" 
        [src]="person.avatar"></ngx-avatar>
     </div>
-    <div class="post-identifier">     
+    <div class="post-identifier" *ngIf="!isPostIdentifierHidden">     
         <p>
             <i class="far fa-user"></i>
             <a href="#" class="post-author-link margin-left-half">

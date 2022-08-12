@@ -1,8 +1,12 @@
 <div class="comment-container">
     <div class="comment-top">
-        <app-personal-avatar-with-identity-display [avatarFigureSize]="50"></app-personal-avatar-with-identity-display>
+        <app-personal-avatar-with-identity-display
+        [person]="comment.person"
+        [createdAt]="comment.createdAt"
+        [avatarFigureSize]="50"
+   ></app-personal-avatar-with-identity-display>
     </div>
     <div class="comment-content">
-        Hello I am Leo. Today is my birthday
+        {{ comment.content }}
     </div>
 </div>
