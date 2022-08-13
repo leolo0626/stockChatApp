@@ -36,8 +36,11 @@
         <div>
             <button class="post-button" (click)="increaseLikes()" (mouseover)="handleMouseOverReact()"
                 (mouseleave)="handleMouseLeaveReact()">
-                <i class="far fa-thumbs-up"></i>
-                <span>Reaction</span>
+                <ng-container>
+                    <i class="far fa-thumbs-up"></i>
+                    <span>{{reactionButtonName}}</span>
+                </ng-container>
+
             </button>
         </div>
         <div>

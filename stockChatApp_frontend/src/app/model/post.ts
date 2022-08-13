@@ -2,6 +2,7 @@ import { ReactionEnum } from '../enumCollections/enumCollections';
 import {Person} from './person';
 
 export interface IPost {
+    id?: string, 
     createdAt: Date;
     content: string;
     person: Person;
@@ -12,6 +13,7 @@ export interface IPost {
 
 export class Post implements IPost {
     constructor(
+        public id: string | undefined ,
         public createdAt: Date,
         public content: string,
         public person: Person, 
@@ -41,6 +43,7 @@ export class Post implements IPost {
 
 export class Comment implements IPost {
     constructor(
+        public id: string | undefined,
         public createdAt: Date,
         public content: string,
         public person: Person, 
