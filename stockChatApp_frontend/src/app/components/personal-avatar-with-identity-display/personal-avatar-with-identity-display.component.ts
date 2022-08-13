@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Person } from '../model/person';
+import { Person } from '../../model/person';
 
 @Component({
   selector: 'app-personal-avatar-with-identity-display',
@@ -15,7 +15,9 @@ export class PersonalAvatarWithIdentityDisplayComponent implements OnInit {
   @Input() public isPostIdentifierHidden: boolean = false;
 
 
-  constructor() { }
+  constructor() { 
+    this.createdAt = new Date();
+  }
 
   ngOnInit(): void {
   }

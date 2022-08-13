@@ -14,8 +14,9 @@ import {MaterialExampleModule} from './material.module';
 import { AvatarModule } from 'ngx-avatar';
 import { SocialMediaPostCardComponentComponent } from './components/social-media-post-card-component/social-media-post-card-component.component';
 import { HttpClientModule } from '@angular/common/http';
-import { PersonalAvatarWithIdentityDisplayComponent } from './personal-avatar-with-identity-display/personal-avatar-with-identity-display.component';
+import { PersonalAvatarWithIdentityDisplayComponent } from './components/personal-avatar-with-identity-display/personal-avatar-with-identity-display.component';
 import { SocialMediaPostCardCommentComponentComponent } from './components/social-media-post-card-component/social-media-post-card-comment-component/social-media-post-card-comment-component.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { SocialMediaPostCardCommentComponentComponent } from './components/socia
     BrowserAnimationsModule,
     MaterialExampleModule,
     HttpClientModule,
-    AvatarModule
+    AvatarModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

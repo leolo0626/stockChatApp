@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
 import { Person } from '../../model/person';
 import { Post } from '../../model/post';
 
@@ -10,10 +11,12 @@ import { Post } from '../../model/post';
 export class HomePageComponent implements OnInit {
 
   public posts: Array<Post>;
+  public user: Person;
 
-  constructor() { }
+  constructor(private userService: UserService) {}
 
   ngOnInit(): void {
+    this.user = this.userService.getUser();
     this.posts = [
       new Post( 
           new Date(),

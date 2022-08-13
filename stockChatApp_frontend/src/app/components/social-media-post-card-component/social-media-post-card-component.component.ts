@@ -10,7 +10,9 @@ import { Person } from '../../model/person';
 export class SocialMediaPostCardComponentComponent implements OnInit {
 
   @Input() public post: Post; 
-
+  @Input() public user: Person;
+  public isShowComment: boolean = false;
+  public newCommentContent: string = '';
 
   constructor() { 
   }
@@ -20,6 +22,11 @@ export class SocialMediaPostCardComponentComponent implements OnInit {
   }
 
   loadComments() {
+    if (this.isShowComment) {
+      return ;
+    }
+    this.isShowComment = true;
+
     this.post.comments = [
       new Post( 
         new Date(),
@@ -49,6 +56,24 @@ export class SocialMediaPostCardComponentComponent implements OnInit {
         100
       )
     ]
+  }
+
+  increaseLikes() {
+    this.post.likes += 1;
+  }
+
+  handleCommentSubmission() {
+    const comment: Post = new Post( 
+      new Date(),
+      this.newCommentContent,
+      this.user,
+      200
+    )
+    this.post.comments = [
+      ...this.post.comments, 
+      comment
+    ]
+    this.newCommentContent = "";
   }
 
 }

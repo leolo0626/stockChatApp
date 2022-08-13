@@ -13,6 +13,7 @@
           <div *ngFor="let post of posts; index as i">
             <app-social-media-post-card-component
               [post]="post"
+              [user]="user"
             ></app-social-media-post-card-component>
           </div>
         </mat-tab>

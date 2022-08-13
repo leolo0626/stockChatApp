@@ -4,8 +4,9 @@
 }
 
 .main-container {
+    left: 200px;
     width: 100%;
-    margin-left: 200px;
+    /* margin-left: 200px; */
 }
 
 .main-container .center {
