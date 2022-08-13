@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Post } from '../model/post';
-import { Person } from '../model/person';
+import { Post } from '../../model/post';
+import { Person } from '../../model/person';
 
 @Component({
   selector: 'app-social-media-post-card-component',

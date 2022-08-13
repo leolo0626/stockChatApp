@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Person } from '../model/person';
-import { Post } from '../model/post';
+import { Person } from '../../model/person';
+import { Post } from '../../model/post';
 
 @Component({
   selector: 'app-home-page',

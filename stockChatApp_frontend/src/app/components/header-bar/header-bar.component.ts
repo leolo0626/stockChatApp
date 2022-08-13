@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Stock } from '../model/stock';
+import { Stock } from '../../model/stock';
 
 @Component({
   selector: 'app-header-bar',
