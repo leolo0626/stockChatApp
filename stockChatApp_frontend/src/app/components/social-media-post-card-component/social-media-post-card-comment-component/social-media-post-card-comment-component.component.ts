@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Post } from '../../../model/post';
+import { Comment } from '../../../model/post';
 
 
 @Component({
@@ -9,7 +9,7 @@ import { Post } from '../../../model/post';
 })
 export class SocialMediaPostCardCommentComponentComponent implements OnInit {
 
-  @Input() public comment : Post;
+  @Input() public comment : Comment;
   constructor() { }
 
   ngOnInit(): void {

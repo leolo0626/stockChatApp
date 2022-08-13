@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ReactionEnum } from 'src/app/enumCollections/enumCollections';
 import { UserService } from 'src/app/services/user.service';
 import { Person } from '../../model/person';
 import { Post } from '../../model/post';
@@ -25,7 +26,9 @@ export class HomePageComponent implements OnInit {
             "Leo Lo", 
             "https://3.bp.blogspot.com/-xT36Kpq_T_E/W1a5CIwueAI/AAAAAAABNjc/nkwOIiInph0FSJ3cpJHdE1Ghu60HX5BfgCLcBGAs/s800/niyakeru_takuramu_ayashii_man.png"
           ),
-          100
+          {
+            [ReactionEnum.LIKE] : [new Person("Leo Lo", "")]
+          }
         ),
         new Post( 
           new Date(),
@@ -34,7 +37,9 @@ export class HomePageComponent implements OnInit {
             "Calico", 
             "https://1.bp.blogspot.com/-1mAMdaOBddY/VaMN9yDgfBI/AAAAAAAAvgw/dInAeqNXapo/s800/youngwoman_37.png"
           ),
-          200
+          {
+            [ReactionEnum.LIKE] : [new Person("Leo Lo", "")]
+          }
         ),
         new Post( 
           new Date(),
@@ -43,7 +48,9 @@ export class HomePageComponent implements OnInit {
             "Meko Chung", 
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPvThbsJRKdRw-JqFhZsCK-09IASZH5bPmRzZFKuDyvXc0Id_f8fJk-OCx-VQbJRgtwgc&usqp=CAU"
           ),
-          100
+          {
+            [ReactionEnum.LIKE] : [new Person("Leo Lo", "")]
+          }
         ),
         new Post( 
           new Date(),
@@ -52,7 +59,9 @@ export class HomePageComponent implements OnInit {
             "Chicken", 
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa0-5udIGPZj7wv4PsOYdAsXKdqzXL1fJYdQ&usqp=CAU"
           ),
-          100
+          {
+            [ReactionEnum.LIKE] : [new Person("Leo Lo", "")]
+          }
         )
     ]
   }

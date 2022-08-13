@@ -2,77 +2,76 @@
     <!-- Personal Display -->
     <section class="post-top">
         <!-- <PersonDisplay data={data} show-icon={true} /> -->
-       <app-personal-avatar-with-identity-display
-            [person]="post.person"
-            [createdAt]="post.createdAt"
-       ></app-personal-avatar-with-identity-display>
+        <app-personal-avatar-with-identity-display [person]="post.person" [createdAt]="post.createdAt">
+        </app-personal-avatar-with-identity-display>
 
     </section>
 
     <!-- Post Content -->
     <section class="post-content">
         <p>
-           {{ post.content }}
+            {{ post.content }}
         </p>
         <p class="content-reactions">
             <i class="far fa-thumbs-up"></i>
-            <span class="margin-left-quarter"> {{ post.likes }}</span>
+            <span class="margin-left-quarter"> {{ post.getTotalReactionCount() }}</span>
             <span clas="margin-left-quarter"> reactions</span>
         </p>
+
+        <div [ngClass]="{'post-react-popup': isShowReactPopUp,'hiding': isReactHiding}"
+            (mouseover)="handleMouseOverReact()" (mouseleave)="handleMouseLeaveReact()">
+            <ng-container *ngIf="isShowReactPopUp">
+                <div class="react-face" *ngFor="let reaction of reactions; index as i"
+                    [style.background-image]="'url('+reaction.img+')'"
+                    (click)="handleClickReact(reaction.id)">
+                </div>
+            </ng-container>
+        </div>
+
+
         <!-- {reactPopup} -->
     </section>
 
     <section class="post-commands">
         <div>
-            <button class="post-button"
-             (click)="increaseLikes()">
+            <button class="post-button" (click)="increaseLikes()" (mouseover)="handleMouseOverReact()"
+                (mouseleave)="handleMouseLeaveReact()">
                 <i class="far fa-thumbs-up"></i>
                 <span>Reaction</span>
             </button>
         </div>
         <div>
-            <button
-            class="post-button"
-            (click)="loadComments()">
-            <i class="far fa-comment"></i>
-            <span>Comment</span>
-        </button>
+            <button class="post-button" (click)="loadComments()">
+                <i class="far fa-comment"></i>
+                <span>Comment</span>
+            </button>
         </div>
         <div>
-            <button
-            class="post-button">
-            <i class="fas fa-share"></i>
-            <span>Share</span>
-        </button>
+            <button class="post-button">
+                <i class="fas fa-share"></i>
+                <span>Share</span>
+            </button>
         </div>
+
 
     </section>
 
     <!-- Comment Session -->
     <!-- Your comment session -->
     <div class="comment-input" *ngIf="isShowComment">
-        <app-personal-avatar-with-identity-display
-        [person]="user"
-        [avatarFigureSize]="50"
-        [isPostIdentifierHidden]="true"
-        ></app-personal-avatar-with-identity-display>
-        <textarea
-            class="text-comment"
-            placeholder="Write your comment here..."
+        <app-personal-avatar-with-identity-display [person]="user" [avatarFigureSize]="50"
+            [isPostIdentifierHidden]="true"></app-personal-avatar-with-identity-display>
+        <textarea class="text-comment" placeholder="Write your comment here..."
             [(ngModel)]="newCommentContent"></textarea>
-        <button 
-            class="send-button"
-            (click)="handleCommentSubmission()"
-        >
+        <button class="send-button" (click)="handleCommentSubmission()">
             <i class="fas fa-paper-plane"></i>
         </button>
     </div>
     <!-- Other Peoples' comment -->
 
     <div *ngFor="let comment of post.comments; index as i ">
-        <app-social-media-post-card-comment-component
-            [comment]="comment"
-        ></app-social-media-post-card-comment-component>
+        <app-social-media-post-card-comment-component [comment]="comment">
+        </app-social-media-post-card-comment-component>
     </div>
 
 
