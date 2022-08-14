@@ -34,11 +34,11 @@
 
     <section class="post-commands">
         <div>
-            <button class="post-button" (click)="increaseLikes()" (mouseover)="handleMouseOverReact()"
+            <button [style.color]="activeReaction['color']" class="post-button" (click)="increaseLikes()" (mouseover)="handleMouseOverReact()"
                 (mouseleave)="handleMouseLeaveReact()">
                 <ng-container>
                     <i class="far fa-thumbs-up"></i>
-                    <span>{{reactionButtonName}}</span>
+                    <span >{{activeReaction['eng_name']}}</span>
                 </ng-container>
 
             </button>

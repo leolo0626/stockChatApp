@@ -17,7 +17,7 @@ export class Post implements IPost {
         public createdAt: Date,
         public content: string,
         public person: Person, 
-        public reactions: Reactions,
+        public reactions: PerosnReactions,
         public comments: Array<Comment> = []
         ){}
     
@@ -29,7 +29,11 @@ export class Post implements IPost {
         return totalCount;
     }
 
-    addReaction(reaction: ReactionEnum, person: Person) {
+    private _isPostLikedByPersonId(person: Person) :boolean {
+        return person.getPostReaction(this.id!) !== null;
+    }
+
+    private _addReactionToPost(reaction: ReactionEnum, person: Person) {
         if (reaction in this.reactions) {
             this.reactions[reaction] = [
               ...this.reactions[reaction]!,
@@ -38,6 +42,18 @@ export class Post implements IPost {
           } else {
             this.reactions[reaction] = [person];
         }
+    }
+    
+    // upsertReaction : update and insert
+    addReaction(reaction: ReactionEnum, person: Person) { 
+        console.log(person)
+        if (this._isPostLikedByPersonId(person)) {
+            const prevReaction = person.getPostReaction(this.id!);
+            if (prevReaction === reaction) return ;
+            // remove id and add the id 
+            this.reactions[prevReaction!] = [...this.reactions[prevReaction!]!.filter((p: Person) => p.id !== person.id)]
+        }
+        this._addReactionToPost(reaction, person)
     }
 }
 
@@ -50,7 +66,7 @@ export class Comment implements IPost {
     ){}
 }
 
-type Reactions = {
+type PerosnReactions = {
     [ReactionEnum.LIKE]? : Array<Person>;
     [ReactionEnum.LOVE]? : Array<Person>;
     [ReactionEnum.HAHA]? : Array<Person>;
