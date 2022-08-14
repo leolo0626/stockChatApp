@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "NODE_OPTIONS='--max_old_space_size=' ng serve --host 0.0.0.0",
+    "start": "NODE_OPTIONS='--max_old_space_size=1024' ng serve --host 0.0.0.0",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
