@@ -1,12 +1,14 @@
 ngx-avatar{
     display:inline-block;
     background-color: white;
+	margin-right:0.5rem;
    
 }
 
 .wrapped-avatar{
     display: flex;
 	flex-direction: row;
+
 }
 
 
@@ -16,7 +18,6 @@ ngx-avatar{
 
 .post-identifier p {
     margin-bottom: 0.25rem;
-    margin-left:1rem;
 }
 
 .post-author-link {

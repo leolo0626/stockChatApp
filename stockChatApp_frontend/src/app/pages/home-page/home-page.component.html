@@ -10,6 +10,17 @@
       
       <mat-tab-group animationDuration="0ms">
         <mat-tab label="Home">
+
+          <div class="card" >
+            <app-personal-avatar-with-identity-display [person]="user" [avatarFigureSize]="50"
+            [isPostIdentifierHidden]="true">
+            </app-personal-avatar-with-identity-display>
+              <input class="" placeholder="What 's on your mind?">
+            
+            
+          </div>
+
+
           <div *ngFor="let post of posts; index as i">
             <app-social-media-post-card-component
               [post]="post"

@@ -88,9 +88,9 @@
      border: 1px solid #2d9fd9;
      color: #a0d18c;
      width: 100%;
-     height: 40px;
+     height: 30px;
      padding-left: 10px;
      vertical-align: middle;
-     background-color: var(--global-backgroundColor-secondary)
+     background-color: var(--global-backgroundColor-secondary);
   }
   

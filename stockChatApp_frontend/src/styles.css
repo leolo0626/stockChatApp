@@ -11,3 +11,8 @@
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+:root {
+    --global-backgroundColor-primary: #242424;
+    --global-backgroundColor-secondary: #3b3b3b;
+}
