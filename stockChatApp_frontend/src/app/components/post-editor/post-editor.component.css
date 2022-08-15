@@ -1,0 +1,23 @@
+.editor-container {
+	min-height:400px;
+    width: 600px;
+	margin: auto;
+	overflow: hidden;
+	box-sizing: border-box;
+    background-color: var(--global-backgroundColor-primary);
+}
+
+.dialog-title {
+    padding:10px;
+    color: white;
+    display:flex;
+    align-content: center;
+    margin: 0;
+    justify-content: space-between;
+}
+
+
+.break-line {
+    border-bottom: 1px solid;
+}
+

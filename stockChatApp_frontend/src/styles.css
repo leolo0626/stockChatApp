@@ -16,3 +16,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     --global-backgroundColor-primary: #242424;
     --global-backgroundColor-secondary: #3b3b3b;
 }
+
+
+mat-dialog-container {
+    background-color: transparent !important;
+    padding: 0px 0px 0px 0px !important;
+    overflow: hidden !important;
+  }

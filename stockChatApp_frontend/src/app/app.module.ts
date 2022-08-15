@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PersonalAvatarWithIdentityDisplayComponent } from './components/personal-avatar-with-identity-display/personal-avatar-with-identity-display.component';
 import { SocialMediaPostCardCommentComponentComponent } from './components/social-media-post-card-component/social-media-post-card-comment-component/social-media-post-card-comment-component.component';
 import { FormsModule } from '@angular/forms';
+import { PostEditorComponent } from './components/post-editor/post-editor.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FormsModule } from '@angular/forms';
     ProfilePageComponent,
     SocialMediaPostCardComponentComponent,
     PersonalAvatarWithIdentityDisplayComponent,
-    SocialMediaPostCardCommentComponentComponent
+    SocialMediaPostCardCommentComponentComponent,
+    PostEditorComponent
   ],
   imports: [
     BrowserModule,

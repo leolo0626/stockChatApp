@@ -4,6 +4,8 @@ import { UserService } from 'src/app/services/user.service';
 import { Person } from '../../model/person';
 import { Post } from '../../model/post';
 import {v4 as uuid} from 'uuid'; 
+import {MatDialog} from '@angular/material/dialog';
+import { PostEditorComponent } from 'src/app/components/post-editor/post-editor.component';
 
 @Component({
   selector: 'app-home-page',
@@ -15,7 +17,7 @@ export class HomePageComponent implements OnInit {
   public posts: Array<Post>;
   public user: Person;
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService, public dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.user = this.userService.getUser();
@@ -86,6 +88,10 @@ export class HomePageComponent implements OnInit {
     this.user.addPostReaction(post.id!, reactionId)
     console.log("Hi I am outside", reactionId)
     console.log("HomePage", this.user,)
+  }
+
+  openDialog() {
+    this.dialog.open(PostEditorComponent)
   }
 
 }
