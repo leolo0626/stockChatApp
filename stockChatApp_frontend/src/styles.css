@@ -13,8 +13,9 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 :root {
-    --global-backgroundColor-primary: #242424;
-    --global-backgroundColor-secondary: #3b3b3b;
+    --global-backgroundColor-primary-black: #242424;
+    --global-backgroundColor-secondary-black: #3b3b3b;
+    --global-color-primary-black: #dadada;
 }
 
 

@@ -69,7 +69,7 @@
 /* can create a component to wrap this things (same as social-media-post-card-component)   */
   .card {
     color:  #ffffff;
-    background-color: var(--global-backgroundColor-primary);
+    background-color: var(--global-backgroundColor-primary-black);
     width: 100%;
     max-width:768px;
     margin: auto;
@@ -91,6 +91,6 @@
      height: 40px;
      padding-left: 10px;
      vertical-align: middle;
-     background-color: var(--global-backgroundColor-secondary)
+     background-color: var(--global-backgroundColor-secondary-black)
   }
   
