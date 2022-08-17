@@ -60,7 +60,7 @@
     padding: 0px 10px
 }
 
-.editor-content-area textarea{
+.editor-content-area div{
     width:100%;
     background-color: var(--global-backgroundColor-primary-black);
     border:none;
