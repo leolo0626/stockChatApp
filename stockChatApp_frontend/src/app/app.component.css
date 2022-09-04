@@ -19,3 +19,11 @@
     padding: 20px;
     border-bottom: 1px solid #e0e4e8;
 }
+
+
+.main-container .right-bottom-pannel{
+    position:fixed;
+    width:500px;
+    bottom:2px; right:0px;
+}
+

@@ -16,8 +16,15 @@ import { SocialMediaPostCardComponentComponent } from './components/social-media
 import { HttpClientModule } from '@angular/common/http';
 import { PersonalAvatarWithIdentityDisplayComponent } from './components/personal-avatar-with-identity-display/personal-avatar-with-identity-display.component';
 import { SocialMediaPostCardCommentComponentComponent } from './components/social-media-post-card-component/social-media-post-card-comment-component/social-media-post-card-comment-component.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule, } from '@angular/forms';
 import { PostEditorComponent } from './components/post-editor/post-editor.component';
+import { MentionModule } from 'angular-mentions';
+import { NgxEditorModule } from "ngx-editor";
+import { MessagerWidgetComponent } from './components/messager-widget/messager-widget.component';
+import { MessageListComponent } from './components/messager-widget/message-list/message-list.component';
+import { MessageChatComponent } from './components/messager-widget/message-chat/message-chat.component';
+import { MessageComponent } from './components/messager-widget/message-chat/message/message.component';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +37,11 @@ import { PostEditorComponent } from './components/post-editor/post-editor.compon
     SocialMediaPostCardComponentComponent,
     PersonalAvatarWithIdentityDisplayComponent,
     SocialMediaPostCardCommentComponentComponent,
-    PostEditorComponent
+    PostEditorComponent,
+    MessagerWidgetComponent,
+    MessageListComponent,
+    MessageChatComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +51,10 @@ import { PostEditorComponent } from './components/post-editor/post-editor.compon
     MaterialExampleModule,
     HttpClientModule,
     AvatarModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    MentionModule,
+    NgxEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

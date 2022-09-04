@@ -2,9 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 
 *{
-    font-family: 'Josefin Sans', sans-serif;
-    list-style: None;
-    text-decoration: none;
     box-sizing: border-box;
     margin: 0;
     padding: 0;

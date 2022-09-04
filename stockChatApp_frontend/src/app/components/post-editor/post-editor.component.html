@@ -18,10 +18,10 @@
         <span class="editor-options-icon">
             <i class="fas fa-solid fa-link fa-2xl"></i>
         </span>
-        <span class="editor-options-icon">
+        <span class="editor-options-icon" (click)="handleOnClick($event, 'bold')">
             <i class="fas fa-solid fa-bold fa-2xl"></i>
         </span>
-        <span class="editor-options-icon">
+        <span class="editor-options-icon" (click)="handleOnClick($event, 'italic')">
             <i class="fas fa-solid fa-italic fa-2xl"></i>
         </span>
         <span class="editor-options-icon">
@@ -29,13 +29,17 @@
         </span>
       </div>
       <div class="break-line"></div>
-      <div class="editor-content-title">
-        <input placeholder="Title (Optional)">
-      </div>
-      <div class="editor-content-area">
-            <div contenteditable="true" (keypress)="onKeyPress($event)">
 
+
+    <div class="editor">
+        <div class="editor-content-title">
+            <input placeholder="Title (Optional)">
             </div>
-      </div>
+        <div class="editor-main-content" contenteditable="true">
+
+        </div>
+        </div>
+
+
 
 </div>

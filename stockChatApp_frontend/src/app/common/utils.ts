@@ -14,5 +14,5 @@ export function  getShortCutKeyCombo(evt: KeyboardEvent) {
     }
 
     shortCutKeys.push(key.toUpperCase())
-    return  shortCutKeys.join("+");
+    return  shortCutKeys.join(" + ");
 }

@@ -1,0 +1,25 @@
+.message-text-container {
+    display:flex;
+}
+
+.message-text-container.left {
+}
+
+.message-text-container.right {
+  justify-content: flex-end !important;
+}
+
+.message-text {
+  border-radius: 21px;
+  background-color: var(--global-backgroundColor-secondary-black);
+  padding: 4px 14px;
+  margin: 4px 4px;
+  width:fit-content;
+  max-width: 50%;
+  word-break: break-word;
+}
+
+.message-text.right {
+  text-align:start
+}
+

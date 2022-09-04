@@ -1,0 +1,42 @@
+.mat-expansion-panel {
+    background-color: var(--global-backgroundColor-primary-black);
+}
+
+.mat-expansion-panel-header-title, .mat-expansion-indicator, .mat-expansion-indicator::after{
+    color: var(--global-color-primary-black) !important;
+}
+
+.mat-expansion-panel-body {
+    padding:0px !important;
+    overflow: hidden;
+}
+
+.my-panel { 
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  } 
+
+
+.mat-expansion-indicator::after {
+    transform: rotate(25deg) !important;
+}
+
+.mat-expansion-indicator::after {
+    transform: rotate(225deg) !important;
+}
+
+.mat-expansion-panel {
+    overflow: inherit !important;
+}
+
+.mat-expansion-panel-header.mat-expanded {
+    position: sticky;
+    top: 0;
+}
+
+.mat-divider {
+    border-top-color: var(--global-color-primary-black);
+    position: sticky;
+    top: 0;
+}

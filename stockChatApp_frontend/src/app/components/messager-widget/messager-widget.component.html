@@ -1,0 +1,23 @@
+<mat-expansion-panel #matExpansionPanel1>
+    <mat-expansion-panel-header >
+      <div class="my-panel" (click)="$event.stopPropagation();">
+        <mat-panel-title>
+          Messager
+        </mat-panel-title>
+        <div style="color:white;">
+          <button mat-stroked-button (click)="addChat()">
+            <mat-icon >
+              chat_bubble
+            </mat-icon>
+          </button>
+        </div>
+      </div>
+
+
+    </mat-expansion-panel-header>
+    <mat-divider></mat-divider>
+    <div style="height:40rem">
+        <!-- <app-message-list [messages]="incomingMessageList"></app-message-list> -->
+        <app-message-chat></app-message-chat>
+    </div>
+</mat-expansion-panel>
