@@ -24,6 +24,7 @@ import { MessagerWidgetComponent } from './components/messager-widget/messager-w
 import { MessageListComponent } from './components/messager-widget/message-list/message-list.component';
 import { MessageChatComponent } from './components/messager-widget/message-chat/message-chat.component';
 import { MessageComponent } from './components/messager-widget/message-chat/message/message.component';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { MessageComponent } from './components/messager-widget/message-chat/mess
     FormsModule,
     ReactiveFormsModule,
     MentionModule,
-    NgxEditorModule
+    NgxEditorModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

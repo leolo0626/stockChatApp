@@ -10,6 +10,8 @@ import { Message } from './message-chat/message/message.component';
 })
 export class MessagerWidgetComponent implements OnInit {
 
+  isChat: boolean = true;
+
   public incomingMessageList: Array<Message> = [];
   constructor() { }
 
@@ -39,5 +41,9 @@ export class MessagerWidgetComponent implements OnInit {
 
   addChat() {
 
+  }
+
+  goBack() {
+    this.isChat = false;
   }
 }

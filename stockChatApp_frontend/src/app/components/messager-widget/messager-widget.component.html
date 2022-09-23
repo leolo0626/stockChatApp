@@ -1,23 +1,48 @@
 <mat-expansion-panel #matExpansionPanel1>
-    <mat-expansion-panel-header >
-      <div class="my-panel" (click)="$event.stopPropagation();">
-        <mat-panel-title>
-          Messager
-        </mat-panel-title>
-        <div style="color:white;">
-          <button mat-stroked-button (click)="addChat()">
-            <mat-icon >
-              chat_bubble
-            </mat-icon>
-          </button>
+  <mat-expansion-panel-header>
+    <div fxLayout="row" (click)="$event.stopPropagation();" fxFlex="100">
+      <!-- Chat Header -->
+      <ng-template [ngIf]="isChat">
+        <div fxLayout="row" fxLayoutGap="10px">
+          <div fxLayoutAlign="space-between center" (click)="goBack()">
+            <mat-icon>arrow_back</mat-icon>
+          </div>
+          <!-- Personal Info -->
+          <div mat-raised-button fxLayout="row" fxLayoutGap="10px">
+            <div>
+              <ngx-avatar [size]="'40'"
+                [src]="'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa0-5udIGPZj7wv4PsOYdAsXKdqzXL1fJYdQ&usqp=CAU'">
+              </ngx-avatar>
+            </div>
+            <div fxLayoutAlign="space-between center">
+              <mat-label>
+                Calico
+              </mat-label>
+            </div>
+          </div>
         </div>
-      </div>
-
-
-    </mat-expansion-panel-header>
-    <mat-divider></mat-divider>
-    <div style="height:40rem">
-        <!-- <app-message-list [messages]="incomingMessageList"></app-message-list> -->
-        <app-message-chat></app-message-chat>
+      </ng-template>
+      <!-- Message List Header -->
+      <ng-template [ngIf]="!isChat">
+        <div fxLayout="row" fxFlex="90" fxLayoutAlign="space-between center">
+          <mat-label> Message </mat-label>
+        </div>
+        <div fxLayoutAlign="space around end" fxFlex="10" (click)="addChat()">
+          <mat-icon>quickreply</mat-icon>
+        </div>
+      </ng-template>
     </div>
+
+  </mat-expansion-panel-header>
+  <mat-divider></mat-divider>
+
+  <div>
+    <ng-template [ngIf]="isChat">
+      <app-message-chat></app-message-chat>
+    </ng-template>
+    <ng-template [ngIf]="!isChat">
+      <app-message-list [messages]="incomingMessageList"></app-message-list>
+    </ng-template>
+
+  </div>
 </mat-expansion-panel>

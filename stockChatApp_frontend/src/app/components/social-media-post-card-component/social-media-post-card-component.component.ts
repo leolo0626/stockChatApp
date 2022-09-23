@@ -114,6 +114,15 @@ export class SocialMediaPostCardComponentComponent implements OnInit {
     this.isShowReactPopUp = false;
   }
 
+  onAnimationEnd($event: any){
+    console.log("Animation End")
+    console.log($event)
+    if ($event.animationName == 'show') {
+      this.isReactHiding = true;
+    }
+
+  }
+
   handleCommentSubmission() {
     const comment: Comment = new Comment(
       uuid(),

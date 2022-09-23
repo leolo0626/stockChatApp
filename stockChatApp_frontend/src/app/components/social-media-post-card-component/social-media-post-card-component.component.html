@@ -18,8 +18,9 @@
             <span clas="margin-left-quarter"> reactions</span>
         </p>
 
-        <div [ngClass]="{'post-react-popup': isShowReactPopUp,'hiding': isReactHiding}"
-            (mouseover)="handleMouseOverReact()" (mouseleave)="handleMouseLeaveReact()">
+        <div [ngClass]="{'post-react-popup': isShowReactPopUp,'hiding': 'true'}"
+            (mouseover)="handleMouseOverReact()" (mouseleave)="handleMouseLeaveReact()"
+            (animationend)="onAnimationEnd($event)">
             <ng-container *ngIf="isShowReactPopUp">
                 <div class="react-face" *ngFor="let reaction of reactions; index as i"
                     [style.background-image]="'url('+reaction.img+')'"

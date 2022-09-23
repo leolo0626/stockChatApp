@@ -11,12 +11,6 @@
     overflow: hidden;
 }
 
-.my-panel { 
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  } 
-
 
 .mat-expansion-indicator::after {
     transform: rotate(25deg) !important;
@@ -34,6 +28,11 @@
     position: sticky;
     top: 0;
 }
+
+.mat-expansion-panel-header {
+    color: var(--global-color-primary-black) !important;
+}
+
 
 .mat-divider {
     border-top-color: var(--global-color-primary-black);
