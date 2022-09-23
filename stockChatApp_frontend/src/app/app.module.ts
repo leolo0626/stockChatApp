@@ -21,7 +21,6 @@ import { PostEditorComponent } from './components/post-editor/post-editor.compon
 import { MentionModule } from 'angular-mentions';
 import { NgxEditorModule } from "ngx-editor";
 import { MessagerWidgetComponent } from './components/messager-widget/messager-widget.component';
-import { MessageListComponent } from './components/messager-widget/message-list/message-list.component';
 import { MessageChatComponent } from './components/messager-widget/message-chat/message-chat.component';
 import { MessageComponent } from './components/messager-widget/message-chat/message/message.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
@@ -40,7 +39,6 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     SocialMediaPostCardCommentComponentComponent,
     PostEditorComponent,
     MessagerWidgetComponent,
-    MessageListComponent,
     MessageChatComponent,
     MessageComponent
   ],

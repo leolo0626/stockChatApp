@@ -36,12 +36,22 @@
   </mat-expansion-panel-header>
   <mat-divider></mat-divider>
 
-  <div>
+  <div style="height:40rem">
     <ng-template [ngIf]="isChat">
       <app-message-chat></app-message-chat>
     </ng-template>
     <ng-template [ngIf]="!isChat">
-      <app-message-list [messages]="incomingMessageList"></app-message-list>
+      <mat-action-list>
+        <button mat-list-item *ngFor="let msg of incomingMessageList"> 
+            <img matListAvatar [src]="msg.user.avatar" alt="...">
+            <h3 matLine>
+                {{msg.user.name}}
+            </h3>
+            <p matLine>
+                <span>{{msg.content.text}}</span>
+            </p>
+        </button>
+      </mat-action-list>
     </ng-template>
 
   </div>
