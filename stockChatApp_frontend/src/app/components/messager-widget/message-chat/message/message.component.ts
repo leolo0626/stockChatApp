@@ -22,6 +22,7 @@ export class MessageComponent implements OnInit {
 type Kind = 'text' | 'image';
 
 interface AnyMessage<T extends Kind, U extends object = {}> {
+  roomId: string;
   user:Person;
   kind: T;
   content:U;

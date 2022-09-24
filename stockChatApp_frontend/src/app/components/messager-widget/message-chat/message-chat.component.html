@@ -6,7 +6,12 @@
     <div class="chat-input">
         <div id="w-input-container">
             <div class="w-input-text-group">
-              <div id="w-input-text" contenteditable (input)="onMessageInputChange($event.target)"></div>
+              <div 
+              id="w-input-text" 
+              contenteditable
+              (input)="onMessageInputChange($event.target)"
+              (keydown.shift.enter)="onMessageSend()"
+              ></div>
               <div class="w-placeholder">
                 Type a message
               </div>

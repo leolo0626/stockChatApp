@@ -4,19 +4,19 @@
       <!-- Chat Header -->
       <ng-template [ngIf]="isChat">
         <div fxLayout="row" fxLayoutGap="10px">
-          <div fxLayoutAlign="space-between center" (click)="goBack()">
+          <div fxLayoutAlign="space-between center" (click)="goBackMessageList()">
             <mat-icon>arrow_back</mat-icon>
           </div>
           <!-- Personal Info -->
           <div mat-raised-button fxLayout="row" fxLayoutGap="10px">
             <div>
               <ngx-avatar [size]="'40'"
-                [src]="'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa0-5udIGPZj7wv4PsOYdAsXKdqzXL1fJYdQ&usqp=CAU'">
+                [src]="curChatRoom.avatar">
               </ngx-avatar>
             </div>
             <div fxLayoutAlign="space-between center">
               <mat-label>
-                Calico
+                {{curChatRoom.name}}
               </mat-label>
             </div>
           </div>
@@ -27,7 +27,7 @@
         <div fxLayout="row" fxFlex="90" fxLayoutAlign="space-between center">
           <mat-label> Message </mat-label>
         </div>
-        <div fxLayoutAlign="space around end" fxFlex="10" (click)="addChat()">
+        <div fxLayoutAlign="space around end" fxFlex="10" (click)="addChatRoom()">
           <mat-icon>quickreply</mat-icon>
         </div>
       </ng-template>
@@ -42,7 +42,7 @@
     </ng-template>
     <ng-template [ngIf]="!isChat">
       <mat-action-list>
-        <button mat-list-item *ngFor="let msg of incomingMessageList"> 
+        <button mat-list-item *ngFor="let msg of incomingMessageList" (click)="openChatRoom(msg)"> 
             <img matListAvatar [src]="msg.user.avatar" alt="...">
             <h3 matLine>
                 {{msg.user.name}}

@@ -11,7 +11,8 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class MessageChatComponent implements OnInit, AfterViewChecked {
 
-  @ViewChild('scrollMe') private myChatContainer: ElementRef;
+  @ViewChild('scrollMe') private chatContainer: ElementRef;
+  // @ViewChild('chatInput') private chatInput: ElementRef;
 
   public user: Person;
   public messageList: Array<Message>  = [];
@@ -23,6 +24,7 @@ export class MessageChatComponent implements OnInit, AfterViewChecked {
     this.user = this.userService.getUser();
     this.messageList = [
       {
+        roomId: 'abc',
         user: fakePersonDataList[0],
         kind: 'text',
         content: {
@@ -32,6 +34,7 @@ export class MessageChatComponent implements OnInit, AfterViewChecked {
         isUser: true
        },
        {
+        roomId: 'abc',
         user: fakePersonDataList[1],
         kind: 'text',
         content: {
@@ -41,6 +44,7 @@ export class MessageChatComponent implements OnInit, AfterViewChecked {
         isUser: false
        },   
        {
+        roomId: 'abc',
         user: fakePersonDataList[0],
         kind: 'text',
         content: {
@@ -50,6 +54,7 @@ export class MessageChatComponent implements OnInit, AfterViewChecked {
         isUser: true
        },
        {
+        roomId: 'abc',
         user: fakePersonDataList[1],
         kind: 'text',
         content: {
@@ -68,7 +73,7 @@ export class MessageChatComponent implements OnInit, AfterViewChecked {
 
   scrollToBottom(): void {
     try {
-        this.myChatContainer.nativeElement.scrollTop = this.myChatContainer.nativeElement.scrollHeight;
+        this.chatContainer.nativeElement.scrollTop = this.chatContainer.nativeElement.scrollHeight;
     } catch(err) { }                 
   }
 
@@ -81,6 +86,7 @@ export class MessageChatComponent implements OnInit, AfterViewChecked {
 
   onMessageSend() {
     this.messageList.push({
+      roomId: 'abc',
       user: this.user,
       kind: 'text',
       content: {

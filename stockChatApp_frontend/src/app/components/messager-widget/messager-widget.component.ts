@@ -1,3 +1,4 @@
+import { ParseSourceFile } from '@angular/compiler';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { fakePersonDataList } from 'src/app/data/fakePersonData';
 import { Message } from './message-chat/message/message.component';
@@ -10,7 +11,8 @@ import { Message } from './message-chat/message/message.component';
 })
 export class MessagerWidgetComponent implements OnInit {
 
-  isChat: boolean = true;
+  isChat: boolean = false;
+  curChatRoom: any = {}
 
   public incomingMessageList: Array<Message> = [];
   constructor() { }
@@ -18,6 +20,7 @@ export class MessagerWidgetComponent implements OnInit {
   ngOnInit(): void {
     this.incomingMessageList = [
       {
+        roomId: '12345',
         user: fakePersonDataList[0],
         kind: 'text',
         content: {
@@ -27,6 +30,7 @@ export class MessagerWidgetComponent implements OnInit {
         isUser: true
        },
        {
+        roomId: 'abc',
         user: fakePersonDataList[1],
         kind: 'text',
         content: {
@@ -39,11 +43,20 @@ export class MessagerWidgetComponent implements OnInit {
   }
 
 
-  addChat() {
-
+  addChatRoom() {
+    //open dialog and find the person to chat
   }
 
-  goBack() {
+  openChatRoom(msg: any) {
+    // MessengerService.loadMessageFromId();
+    this.isChat = true;
+    this.curChatRoom = { name: msg.user.name , avatar: msg.user.avatar }
+    console.log(msg);
+  }
+
+  goBackMessageList() {
     this.isChat = false;
   }
+
+  
 }
