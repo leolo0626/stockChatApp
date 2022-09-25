@@ -51,7 +51,6 @@ export class MessagerWidgetComponent implements OnInit {
     // MessengerService.loadMessageFromId();
     this.isChat = true;
     this.curChatRoom = { name: msg.user.name , avatar: msg.user.avatar }
-    console.log(msg);
   }
 
   goBackMessageList() {

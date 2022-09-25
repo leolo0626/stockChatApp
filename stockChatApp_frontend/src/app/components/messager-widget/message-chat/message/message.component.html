@@ -1,7 +1,9 @@
 <div mat-list-item [class]="message.isUser ? 'message-text-container right' : 'message-text-container left' ">
     <div [class]="message.isUser ? 'message-text right' : 'message-text left'">
         <h4 style="color:aqua;margin: 0 !important;">{{message.user.name}}</h4>
-        <p style="margin: 0 !important;"> {{message.content.text}}</p>
+        <!-- <p style="margin: 0 !important;"> {{message.content.text}}</p> -->
+        <div style="margin: 0 !important;" [innerHTML]="message.content.text">
+        </div>
         <p style="margin: 0 !important;text-align: end;font-size: 10px;color:grey">{{message.datetime.toLocaleTimeString()}}</p>
     </div>
 </div>
