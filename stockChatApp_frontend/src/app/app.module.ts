@@ -23,8 +23,8 @@ import { NgxEditorModule } from "ngx-editor";
 import { MessagerWidgetComponent } from './components/messager-widget/messager-widget.component';
 import { MessageChatComponent } from './components/messager-widget/message-chat/message-chat.component';
 import { MessageComponent } from './components/messager-widget/message-chat/message/message.component';
+import { CreateChatRoomDialog } from './components/dialog/create-chat-room-dialog/create-chat-room-dialog.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
-
 
 @NgModule({
   declarations: [
@@ -40,7 +40,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     PostEditorComponent,
     MessagerWidgetComponent,
     MessageChatComponent,
-    MessageComponent
+    MessageComponent,
+    CreateChatRoomDialog
   ],
   imports: [
     BrowserModule,

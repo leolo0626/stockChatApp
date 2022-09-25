@@ -1,7 +1,8 @@
-import { ParseSourceFile } from '@angular/compiler';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { fakePersonDataList } from 'src/app/data/fakePersonData';
 import { Message } from './message-chat/message/message.component';
+import { CreateChatRoomDialog } from '../dialog/create-chat-room-dialog/create-chat-room-dialog.component';
 
 @Component({
   selector: 'app-messager-widget',
@@ -15,7 +16,7 @@ export class MessagerWidgetComponent implements OnInit {
   curChatRoom: any = {}
 
   public incomingMessageList: Array<Message> = [];
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.incomingMessageList = [
@@ -43,8 +44,12 @@ export class MessagerWidgetComponent implements OnInit {
   }
 
 
-  addChatRoom() {
+  openCreateChatRoomDialog() {
     //open dialog and find the person to chat
+    const dialogRef = this.dialog.open(CreateChatRoomDialog, {
+      height: '600px',
+      width: '400px'
+    })
   }
 
   openChatRoom(msg: any) {
