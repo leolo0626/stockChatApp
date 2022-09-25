@@ -1,24 +1,34 @@
-<div class="chat">
+<div class="chat" fxLayout="column">
     <div class="chat-content"  #scrollMe>
             <app-message *ngFor="let msg of messageList" [message]="msg"></app-message>
     </div>
-    <mat-divider></mat-divider>
-    <div class="chat-input">
-        <div id="w-input-container">
+    <div>
+
+    </div>
+    <mat-divider style="z-index:1000;"></mat-divider>
+    <div class="chat-input" fxLayout="row">
+        <div id="w-input-container" fxFlex="95">
             <div class="w-input-text-group">
               <div 
               id="w-input-text" 
               contenteditable
               (input)="onMessageInputChange($event.target)"
               (keydown.shift.enter)="onMessageSend()"
+              #chatInput
               ></div>
               <div class="w-placeholder">
                 Type a message
               </div>
             </div>
           </div>
-          <button style="background-color:transparent;color:white;border:none;" (click)="onMessageSend()">
-            <mat-icon>send</mat-icon>
-          </button>
+          <div fxLayout="row" fxFlex="5">
+            <div fxLayoutAlign="space-around center end" >
+              <button style="background-color:transparent;color:white;border:none;" (click)="onMessageSend()">
+                <mat-icon>send</mat-icon>
+              </button>
+            </div>
+          </div>
+
+
     </div>
 </div>

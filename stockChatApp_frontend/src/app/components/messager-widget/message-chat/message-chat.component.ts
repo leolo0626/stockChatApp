@@ -12,7 +12,7 @@ import { UserService } from 'src/app/services/user.service';
 export class MessageChatComponent implements OnInit, AfterViewChecked {
 
   @ViewChild('scrollMe') private chatContainer: ElementRef;
-  // @ViewChild('chatInput') private chatInput: ElementRef;
+  @ViewChild('chatInput') private chatInput: ElementRef;
 
   public user: Person;
   public messageList: Array<Message>  = [];
@@ -95,6 +95,9 @@ export class MessageChatComponent implements OnInit, AfterViewChecked {
       datetime: new Date(),
       isUser: true // this is not suitable
     })
+    this.messageInput = "";
+    this.chatInput.nativeElement.innerHTML = "";
+    return false; // it will disable shift + enter for next line in contentible div
   }
 
 

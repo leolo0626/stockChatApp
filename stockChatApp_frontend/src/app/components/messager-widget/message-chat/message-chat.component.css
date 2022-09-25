@@ -12,15 +12,10 @@
 
 
 .chat-input {
-    position: relative;
     margin-top:8px;
-    flex-direction: row;
-    display:flex;
+    margin-bottom: 8px;
     color:var(--global-color-primary-black);
-}
 
-.mat-divider {
-    border-top-color: var(--global-color-primary-black)
 }
 
 #w-input-container {
@@ -32,10 +27,7 @@
     background-color: var(--global-backgroundColor-secondary-black);
     border: 1px solid var(--global-color-primary-black);
     border-radius: 21px;
-    /* position:absolute;
-    bottom:0; */
     display: inline-block;
-
   }
   
   .w-input-text-group {
@@ -80,3 +72,6 @@
     padding: 0 6px 0px;
   }
   
+  .mat-divider {
+    border-top-color: var(--global-color-primary-black)
+}
