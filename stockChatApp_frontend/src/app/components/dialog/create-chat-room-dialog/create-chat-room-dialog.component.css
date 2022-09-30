@@ -1,0 +1,9 @@
+.dialog-wrapper{
+    background-color: var(--global-backgroundColor-secondary-black);
+    color:var(--global-color-primary-black)
+}
+
+.search-box {
+    background-color: var(--global-backgroundColor-secondary-black);
+    color:var(--global-color-primary-black)
+}

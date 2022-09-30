@@ -1,38 +1,61 @@
-<div fxLayout="column" fxFlex="100" style="height:600px;" fxLayoutGap="10px">
+<div class="dialog-wrapper" fxLayout="column" fxFlex="100" style="height:400px;">
 
-    <div fxLayout="row" fxFlex="10" fxLayoutAlign="space-around center">
-            <h1>New message or group</h1>  
-    </div>
-    <mat-divider></mat-divider>
-    <div fxLayout="row" fxFlex="10">
-        <mat-label>
-            To: 
-        </mat-label>
-        <input type="text" matInput style="width:80%; border:none; outline: none"/>
+  <div fxLayout="row" fxFlex="15%" fxLayoutAlign="space-around center" style="font-size:20px">
+    <strong>New message or group</strong>
+  </div>
+  <mat-divider></mat-divider>
+  <div fxLayout="row" fxFlex="15%" fxLayoutAlign="space-around center" style="font-size:15px">
+    <mat-label>To: </mat-label>
+    <input class="search-box" type="text" style="width:80%; border:none; outline: none; font-size:15px" />
 
-    </div>
+  </div>
 
-    <div fxLayout="column" fxFlex="15">
-        Create a New Group
+  <div mat-raised-button fxLayout="row" fxFlex="15" fxLayoutAlign="space-around center" style="cursor: pointer;">
+    <div fxLayout="row" fxFlex="80">
+      <div fxFlex="10" fxLayoutAlign="space-between center">
+        <mat-icon>groups</mat-icon>
+      </div>
+      <div fxFlex="70" style="font-size:18px" fxLayoutAlign="space-between center">
+        Create a New Group (Coming soon)
+      </div>
     </div>
+    <div fxFlex="10" fxLayoutAlign="space-between center">
+      <mat-icon>navigate_next</mat-icon>
+    </div>
+  </div>
 
-    <div fxLayout="column" fxFlex="35">
-        Search Result
-    </div>
+  <div fxLayout="column" fxFlex="70">
+    <div fxLayout="row" fxLayoutAlign="space-around center"  fxLayoutGap="10px">
+      <!-- Personal Info -->
+      <div fxLayout="row" fxLayoutGap="10px" fxFlex="80">
+        <div>
+          <a href="https://www.linkedin.com/in/leolo-tech123/">
+            <ngx-avatar [size]="'40'"
+            [src]="'https://3.bp.blogspot.com/-xT36Kpq_T_E/W1a5CIwueAI/AAAAAAABNjc/nkwOIiInph0FSJ3cpJHdE1Ghu60HX5BfgCLcBGAs/s800/niyakeru_takuramu_ayashii_man.png'">
+            </ngx-avatar>
+          </a>
+        </div>
+        <div fxLayout="column">
+          <div>
+            <mat-label>
+              Leo Lo
+            </mat-label>
+          </div>
+          <div>
+            <mat-label style="color:grey">
+              @leolo
+            </mat-label>
+          </div>
 
+        </div>
+      </div>
+      <div fxLayoutAlign="space-between center" fxFlex="10">
+        <mat-checkbox class="example-margin"></mat-checkbox>
+      </div>
+    </div>
+  </div>
 
-    <!-- <div mat-dialog-content>
-      <p>What's your favorite animal?</p>
-      <mat-form-field appearance="fill">
-        <mat-label>Favorite Animal</mat-label>
-      </mat-form-field>
-    </div>
-    <div mat-dialog-actions>
-      <button mat-button>Create DM</button>
-    </div>
- -->
-    <div fxLayout="column" fxFlex="20" fxLayoutAlign="space-around center">
-        <button mat-button style="width:80%">Create DM</button>
-    </div>
+  <div fxLayout="column" fxFlex="20" fxLayoutAlign="space-around center">
+    <button mat-button style="width:80%;background-color:rgb(5, 113, 101)">Create DM</button>
+  </div>
 </div>
-

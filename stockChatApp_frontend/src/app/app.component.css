@@ -23,7 +23,8 @@
 
 .main-container .right-bottom-pannel{
     position:fixed;
-    width:500px;
+    width:450px;
     bottom:2px; right:0px;
+    z-index:1000;
 }
 

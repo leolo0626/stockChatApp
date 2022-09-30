@@ -47,7 +47,7 @@ export class MessagerWidgetComponent implements OnInit {
   openCreateChatRoomDialog() {
     //open dialog and find the person to chat
     const dialogRef = this.dialog.open(CreateChatRoomDialog, {
-      height: '600px',
+      height: '400px',
       width: '400px'
     })
   }
