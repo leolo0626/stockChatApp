@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  rest-api:
+    build: .
+    image: stock-chat-app-restful-api
+    ports:
+      - "8080:8080"
