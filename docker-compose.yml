@@ -34,5 +34,5 @@ services:
 
 networks:
   mynets:
-  driver: bridge
+    driver: bridge
 
