@@ -22,7 +22,7 @@ services:
       - "4200:4200"
     
   db:
-    images: postgres:14.1-alpine
+    image: postgres:14.1-alpine
     env_file: 
       - '.env'
     ports:
@@ -31,8 +31,8 @@ services:
       - './postgresql/data:/var/lib/postgresql/data'
     networks:
       - mynets
-  
-  networks:
-    mynets:
-      driver: bridge
+      
+networks:
+   mynets:
+  driver: bridge
 
