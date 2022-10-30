@@ -31,8 +31,8 @@ services:
       - './postgresql/data:/var/lib/postgresql/data'
     networks:
       - mynets
-      
+
 networks:
-   mynets:
+  mynets:
   driver: bridge
 
