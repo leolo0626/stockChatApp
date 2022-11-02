@@ -17,11 +17,11 @@ services:
     external_links:
       - postgres_database
 
-    # frontend:
-    #   build: stockChatApp_frontend/.
-    #   image: stock-chat-app-frontend
-    #   ports:
-    #     - "4200:4200"
+    frontend:
+      build: stockChatApp_frontend/.
+      image: stock-chat-app-frontend
+      ports:
+        - "4200:4200"
 
 networks:
   my-network:
