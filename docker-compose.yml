@@ -7,32 +7,13 @@ services:
         - JASYPT_ENCRYPTOR_PWD=$JASYPT_ENCRYPTOR_PWD
     image: stock-chat-app-restful-api
     env_file:
-      - '.env'
+      - .env
     ports:
       - "8080:8080"
-    depends_on:
-      - db
-    networks:
-      - mynets
 
-  frontend:
-    build: stockChatApp_frontend/.
-    image: stock-chat-app-frontend
-    ports:
-      - "4200:4200"
+  # frontend:
+  #   build: stockChatApp_frontend/.
+  #   image: stock-chat-app-frontend
+  #   ports:
+  #     - "4200:4200"
     
-  db:
-    image: postgres:14.1-alpine
-    env_file: 
-      - '.env'
-    ports:
-      - '5432:5432'
-    volumes:
-      - './postgresql/data:/var/lib/postgresql/data'
-    networks:
-      - mynets
-
-networks:
-  mynets:
-    driver: bridge
-
