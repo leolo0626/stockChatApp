@@ -1,12 +1,6 @@
-.app-container {
-    display: flex;
-    position: relative;
-}
-
 .main-container {
     left: 200px;
     width: 100%;
-    /* margin-left: 200px; */
 }
 
 .main-container .center {

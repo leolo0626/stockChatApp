@@ -25,12 +25,15 @@ import { MessageChatComponent } from './components/messager-widget/message-chat/
 import { MessageComponent } from './components/messager-widget/message-chat/message/message.component';
 import { CreateChatRoomDialog } from './components/dialog/create-chat-room-dialog/create-chat-room-dialog.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { FormFieldComponent } from './components/form-field/form-field.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     HomePageComponent,
+    LoginPageComponent,
     HeaderBarComponent,
     TickerCardForHeaderBarComponent,
     ProfilePageComponent,
@@ -41,7 +44,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     MessagerWidgetComponent,
     MessageChatComponent,
     MessageComponent,
-    CreateChatRoomDialog
+    CreateChatRoomDialog,
+    FormFieldComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,36 @@
+.main-div{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.compact-input {
+  .mat-input-element{
+    height: 30px
+  }
+
+  .mat-form-field-infix {
+    padding: 0;
+    border-top:none;
+    padding-bottom:5px;
+    padding-top:7px;
+  }
+
+  .mat-form-field-wrapper {
+    padding-bottom: 0;
+  }
+
+  .mat-form-field-outline{ 
+    top: 0!important;
+  }
+
+  .mat-form-field-suffix {
+    top: 0!important;
+  }
+
+  .mat-icon {
+    font-size: 120% !important;
+  }
+}

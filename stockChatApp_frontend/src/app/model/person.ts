@@ -11,6 +11,7 @@ export class Person {
     private _checkPostReactionExist (postId: string) : boolean {
         return postId in this.postReactions;
     }
+
     addPostReaction(postId: string, reaction: ReactionEnum) {
         console.log(postId);
         this.postReactions[postId] = reaction;
