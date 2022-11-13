@@ -1,5 +1,4 @@
-import { Component, ContentChild, OnInit, ViewChild, ViewEncapsulation} from "@angular/core";
-import { MatFormField, MatFormFieldControl } from "@angular/material/form-field";
+import { Component, ViewEncapsulation} from "@angular/core";
 
 @Component({
   selector: "form-field",
@@ -8,10 +7,4 @@ import { MatFormField, MatFormFieldControl } from "@angular/material/form-field"
   encapsulation: ViewEncapsulation.None
 })
 export class FormFieldComponent {
-    // @ContentChild(MatFormFieldControl) _control!: MatFormFieldControl<any>;
-    // @ViewChild(MatFormField) _matFormField!: MatFormField;
-
-    // ngOnInit() {
-    //     this._matFormField._control = this._control;
-    // }
 }
