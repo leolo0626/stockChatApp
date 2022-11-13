@@ -7,88 +7,98 @@
       </mat-card-header>
       <mat-card-content style="font-size:20px">
          <ng-template [ngIf]="!isRegister">
-            <form>
+            <form [formGroup]="loginForm">
                <div fxLayout="column" fxLayoutGap="10px">
                   <div fxLayout="column" fxLayoutGap="5px">
                      <label>Username</label>
                      <form-field>
-                        <input matInput type="text">
+                        <input matInput type="text" formControlName="username">
                      </form-field>
                   </div>
                   <div fxLayout="column" fxLayoutGap="5px">
                      <label>Password</label>
                      <form-field>
-                        <input matInput type="password">
+                        <input matInput type="password" formControlName="password">
                         <mat-icon matSuffix>
                            visibility
                         </mat-icon>
                      </form-field>
                   </div>
-               </div>
-               <div>
-                  <button mat-raised-button color="primary">
-                     Login
-                  </button>
-                  <button mat-flat-button (click)="switchTo('register')">
-                     Register
-                  </button>
+                  <div>
+                     <button mat-raised-button color="primary" (click)="onLogin()">
+                        Login
+                     </button>
+                     <button mat-flat-button (click)="switchTo('register')">
+                        Register
+                     </button>
+                  </div>
                </div>
             </form>
          </ng-template>
          <ng-template [ngIf]="isRegister">
-            <form>
+            <form [formGroup]="registerForm" autocomplete="off">
                <div fxLayout="column" fxLayoutGap="10px">
                   <div fxLayout="column" fxLayoutGap="5px">
                      <label>First Name</label>
                      <form-field>
-                        <input matInput type="text">
+                        <input matInput type="text" formControlName="firstName">
                      </form-field>
+                     <div *ngIf="isRegisterFormSubmitted && rform['firstName'].errors" class="invalid-feedback">
+                        <div *ngIf="rform['firstName'].errors?.['required']">First name is required</div>
+                     </div>
                   </div>
                   <div fxLayout="column" fxLayoutGap="5px">
                      <label>Last Name</label>
                      <form-field>
-                        <input matInput type="text">
+                        <input matInput type="text" formControlName="lastName">
                      </form-field>
+                     <div *ngIf="isRegisterFormSubmitted && rform['lastName'].errors" class="invalid-feedback">
+                        <div *ngIf="rform['lastName'].errors?.['required']">Last Name is required</div>
+                     </div>
                   </div>
                   <div fxLayout="column" fxLayoutGap="5px">
                      <label>Email</label>
                      <form-field>
-                        <input matInput type="email">
+                        <input matInput type="email" formControlName="email" required placeholder="abc@email.com" autocomplete="on">
                      </form-field>
+                     <div *ngIf="isRegisterFormSubmitted && rform['email'].errors" class="invalid-feedback">
+                        <div *ngIf="rform['email'].errors?.['required']">Email is required</div>
+                        <div *ngIf="rform['email'].errors?.['pattern']">Invalid Email Address</div>
+                     </div>
                   </div>
                   <div fxLayout="column" fxLayoutGap="5px">
                      <label>Username</label>
                      <form-field>
-                        <input matInput type="text">
+                        <input matInput type="text" formControlName="username">
                      </form-field>
+                     <div *ngIf="isRegisterFormSubmitted && rform['username'].errors" class="invalid-feedback">
+                        <div *ngIf="rform['username'].errors?.['required']">Username is required</div>
+                     </div>
                   </div>
                   <div fxLayout="column" fxLayoutGap="5px">
                      <label>Password</label>
                      <form-field>
-                        <input matInput type="password">
+                        <input matInput type="password" formControlName="password" autocomplete="off">
                         <mat-icon matSuffix>
                            visibility
                         </mat-icon>
                      </form-field>
+                     <div *ngIf="isRegisterFormSubmitted && rform['password'].errors" class="invalid-feedback">
+                        <div *ngIf="rform['password'].errors?.['required']">Password is required</div>
+                     </div>
+                  </div>
+                  <div>
+                     <button mat-raised-button color="primary" (click)="onRegister()">
+                        Register
+                     </button>
+                     <button mat-flat-button (click)="switchTo('login')">
+                        cancel
+                     </button>
                   </div>
                </div>
-               <div>
-                  <button mat-raised-button color="primary">
-                     Register
-                  </button>
-                  <button mat-flat-button (click)="switchTo('login')">
-                     cancel
-                  </button>
-               </div>
+
             </form>
          </ng-template>
-
-
       </mat-card-content>
-
-
-
-
-
    </mat-card>
 </div>
