@@ -9,9 +9,16 @@ import { ViewEncapsulation } from '@angular/core';
 })
 export class LoginPageComponent implements OnInit {
 
+  isRegister = false;
+
   constructor() {}
 
   ngOnInit(): void {
+  }
+
+  switchTo(page: string) {
+    console.log(page)
+    this.isRegister = page === 'register';
   }
 
 }

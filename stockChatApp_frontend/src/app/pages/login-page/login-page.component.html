@@ -1,41 +1,94 @@
 <div class="main-div">
-  <mat-card style="width:400px;font-size:25px">
-    <mat-card-header>
-      <mat-card-title>
-         Login
-      </mat-card-title>
-    </mat-card-header>
-    <mat-card-content style="font-size:20px">
-      <form>
-         <div fxLayout="column" fxLayoutGap="10px">
-            <div fxLayout="column" fxLayoutGap="5px">
-               <label>Username</label>
-               <form-field>
-                  <input matInput type="text">
-               </form-field>
-            </div>
-            <div fxLayout="column"  fxLayoutGap="5px">
-               <label>Password</label>
-               <form-field>
-                  <input matInput type="password">
-                  <mat-icon matSuffix>
-                     visibility
-                  </mat-icon>
-               </form-field>
-            </div>
+   <mat-card style="width:400px;font-size:25px">
+      <mat-card-header>
+         <mat-card-title>
+            {{ isRegister ? 'Register' : 'Login' }}
+         </mat-card-title>
+      </mat-card-header>
+      <mat-card-content style="font-size:20px">
+         <ng-template [ngIf]="!isRegister">
+            <form>
+               <div fxLayout="column" fxLayoutGap="10px">
+                  <div fxLayout="column" fxLayoutGap="5px">
+                     <label>Username</label>
+                     <form-field>
+                        <input matInput type="text">
+                     </form-field>
+                  </div>
+                  <div fxLayout="column" fxLayoutGap="5px">
+                     <label>Password</label>
+                     <form-field>
+                        <input matInput type="password">
+                        <mat-icon matSuffix>
+                           visibility
+                        </mat-icon>
+                     </form-field>
+                  </div>
+               </div>
+               <div>
+                  <button mat-raised-button color="primary">
+                     Login
+                  </button>
+                  <button mat-flat-button (click)="switchTo('register')">
+                     Register
+                  </button>
+               </div>
+            </form>
+         </ng-template>
+         <ng-template [ngIf]="isRegister">
+            <form>
+               <div fxLayout="column" fxLayoutGap="10px">
+                  <div fxLayout="column" fxLayoutGap="5px">
+                     <label>First Name</label>
+                     <form-field>
+                        <input matInput type="text">
+                     </form-field>
+                  </div>
+                  <div fxLayout="column" fxLayoutGap="5px">
+                     <label>Last Name</label>
+                     <form-field>
+                        <input matInput type="text">
+                     </form-field>
+                  </div>
+                  <div fxLayout="column" fxLayoutGap="5px">
+                     <label>Email</label>
+                     <form-field>
+                        <input matInput type="email">
+                     </form-field>
+                  </div>
+                  <div fxLayout="column" fxLayoutGap="5px">
+                     <label>Username</label>
+                     <form-field>
+                        <input matInput type="text">
+                     </form-field>
+                  </div>
+                  <div fxLayout="column" fxLayoutGap="5px">
+                     <label>Password</label>
+                     <form-field>
+                        <input matInput type="password">
+                        <mat-icon matSuffix>
+                           visibility
+                        </mat-icon>
+                     </form-field>
+                  </div>
+               </div>
+               <div>
+                  <button mat-raised-button color="primary">
+                     Register
+                  </button>
+                  <button mat-flat-button (click)="switchTo('login')">
+                     cancel
+                  </button>
+               </div>
+            </form>
+         </ng-template>
 
-            <div>
-               <button mat-raised-button color="primary">
-                  Login
-               </button>
-               <button mat-flat-button>
-                  Register
-               </button>
-            </div>
-         </div>
-      </form>
-    </mat-card-content>
-</mat-card>
+
+      </mat-card-content>
+
+
+
+
+
+   </mat-card>
 </div>
-
-
