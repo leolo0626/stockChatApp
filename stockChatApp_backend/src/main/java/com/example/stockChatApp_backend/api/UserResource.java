@@ -47,6 +47,15 @@ public class UserResource {
         return ResponseEntity.created(uri).body(userService.saveUser(user));
     }
 
+    @PostMapping("/user/register")
+    public ResponseEntity<User> registerUser(@RequestBody User user) {
+        URI uri = URI.create(ServletUriComponentsBuilder.fromCurrentContextPath().path("/api/user/register").toUriString());
+        userService.saveUser(user);
+        userService.addRoleToUser(user.getUsername(), Role.RoleName.ROLE_USER.toString());
+        return ResponseEntity.created(uri).body(userService.getUser(user.getUsername()));
+    }
+
+
     @PostMapping("/role/save")
     public ResponseEntity<Role> saveRole(@RequestBody Role role) {
         URI uri = URI.create(ServletUriComponentsBuilder.fromCurrentContextPath().path("/api/role/save").toUriString());

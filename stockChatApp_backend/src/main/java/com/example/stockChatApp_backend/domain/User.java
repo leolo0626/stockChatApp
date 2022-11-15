@@ -15,7 +15,9 @@ import static javax.persistence.GenerationType.AUTO;
 public class User {
     @Id @GeneratedValue(strategy = AUTO)
     private Long id;
-    private String name;
+    private String firstName;
+    private String lastName;
+    private String email;
     private String username;
     private String password;
     @ManyToMany(fetch = FetchType.EAGER)

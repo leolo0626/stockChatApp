@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
+import { UserService } from 'src/app/services/user.service';
+import { first } from 'rxjs/operators';
 
 @Component({
   selector: 'app-login-page',
@@ -11,14 +13,13 @@ import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/fo
 export class LoginPageComponent implements OnInit {
 
   isRegister: boolean = false;
+  isLoading: boolean = false;
   isRegisterFormSubmitted: boolean = false;
 
   registerForm!: FormGroup;
   loginForm!: FormGroup;
 
-
-
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder, private userService: UserService) {}
 
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
@@ -53,6 +54,17 @@ export class LoginPageComponent implements OnInit {
       console.log("Invalid Register Form");
       return; 
     }
+
+    this.isLoading = true;
+    this.userService.register(this.registerForm.value).pipe(first()).subscribe({
+        next: () => {
+          this.isRegister = false;
+          this.isLoading = false;
+        },
+        error: () => {
+          this.isLoading = false;
+        }
+    });
   }
 
   onLogin() {

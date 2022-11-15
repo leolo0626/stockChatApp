@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { Roles } from '../enumCollections/enumCollections';
 import { Person } from '../model/person';
 import { User } from '../model/user';
 

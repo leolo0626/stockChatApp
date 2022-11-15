@@ -1,9 +1,12 @@
+import { Roles } from "../enumCollections/enumCollections";
+
 export class User {
-    id!: string;
+    id?: string;
     username!: string;
     password!: string;
     firstName!: string;
     lastName!: string;
-    emailAddress!: string;
-    token!: string
+    email!: string;
+    token?: string;
+    roles?: Array<Roles>;
 }

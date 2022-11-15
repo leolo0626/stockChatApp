@@ -19,4 +19,11 @@ public class Role {
     @GeneratedValue(strategy = AUTO)
     private Long id;
     private String name;
+
+    public enum RoleName {
+        ROLE_USER,
+        ROLE_MANAGER,
+        ROLE_ADMIN,
+        ROLE_SUPER_ADMIN
+    }
 }

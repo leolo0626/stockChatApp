@@ -12,6 +12,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import java.util.ArrayList;
 
@@ -22,6 +25,16 @@ public class StockChatAppBackendApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(StockChatAppBackendApplication.class, args);
+	}
+
+	@Bean
+	public WebMvcConfigurer corsConfigurer() {
+		return new WebMvcConfigurerAdapter() {
+			@Override
+			public void addCorsMappings(CorsRegistry registry) {
+				registry.addMapping("/**").allowedOrigins("http://localhost:4200");
+			}
+		};
 	}
 
 	@Bean
@@ -36,12 +49,6 @@ public class StockChatAppBackendApplication {
 			userService.saveRole(new Role(null, "ROLE_MANAGER"));
 			userService.saveRole(new Role(null, "ROLE_ADMIN"));
 			userService.saveRole(new Role(null, "ROLE_SUPER_ADMIN"));
-
-			userService.saveUser(new User(null, "Leo Lo", "leolo0626", "1234", new ArrayList<>()));
-			userService.saveUser(new User(null, "Meko Chung", "meko0307", "1234", new ArrayList<>()));
-
-			userService.addRoleToUser("leolo0626", "ROLE_SUPER_ADMIN");
-			userService.addRoleToUser("meko0307", "ROLE_USER");
 		};
 	}
 }
