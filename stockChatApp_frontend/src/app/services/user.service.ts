@@ -11,7 +11,7 @@ import { User } from '../model/user';
   providedIn: 'root'
 })
 export class UserService {
-  private static USERAPI: string = 'http://localhost:8080/api/user'
+  private static USERAPI: string = '/api/user'
 
   private userSubject: BehaviorSubject<User|undefined>;
   public user: Observable<User|undefined>;
