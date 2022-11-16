@@ -4,7 +4,7 @@ COPY ./package.json ./
 COPY package-lock.json ./
 COPY . .
 RUN npm i
-CMD npm run build
+RUN npm run build
 
 FROM nginx:latest AS ngi
 COPY --from=build /app/dist/stock-chat-app-frontend /usr/share/nginx/html
