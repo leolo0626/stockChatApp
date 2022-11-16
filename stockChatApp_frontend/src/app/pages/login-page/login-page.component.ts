@@ -72,6 +72,14 @@ export class LoginPageComponent implements OnInit {
       console.log("Invalid Login Form");
       return;
     }
+    this.userService.login(this.loginForm.get('username')?.value, this.loginForm.get('password')?.value).subscribe({
+      next: (msg) => {
+        console.log("Login Successfully");
+      },
+      error: () => {
+        console.log("Fail to Login");
+      }
+    });
   }
 
 }

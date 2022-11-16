@@ -1,10 +1,8 @@
 package com.example.stockChatApp_backend;
 
 import com.example.stockChatApp_backend.domain.Role;
-import com.example.stockChatApp_backend.domain.User;
 import com.example.stockChatApp_backend.service.UserService;
 import com.ulisesbocchio.jasyptspringboot.annotation.EnableEncryptableProperties;
-import com.ulisesbocchio.jasyptspringboot.annotation.EncryptablePropertySource;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -32,7 +30,12 @@ public class StockChatAppBackendApplication {
 		return new WebMvcConfigurerAdapter() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins("http://localhost:4200");
+				registry.addMapping("/**")
+						.allowedOrigins("*")
+						.allowedHeaders("*")
+						.allowedMethods("*")
+						.maxAge(-1)   // add maxAge
+						.allowCredentials(false);;
 			}
 		};
 	}

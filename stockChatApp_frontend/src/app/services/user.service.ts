@@ -19,8 +19,8 @@ export class UserService {
   constructor(
     private router: Router,
     private http: HttpClient
-  ) { 
-    this.userSubject = new BehaviorSubject<User|undefined>(localStorage.getItem('user') ? 
+  ) {
+    this.userSubject = new BehaviorSubject<User|undefined>(localStorage.getItem('user') ?
     JSON.parse(localStorage.getItem('user')|| '{}') : undefined);
     this.user = this.userSubject.asObservable();
   }
@@ -28,13 +28,16 @@ export class UserService {
   getUser(): Person {
     return new Person(
       '1',
-      "Leo Lo", 
+      "Leo Lo",
       "https://3.bp.blogspot.com/-xT36Kpq_T_E/W1a5CIwueAI/AAAAAAABNjc/nkwOIiInph0FSJ3cpJHdE1Ghu60HX5BfgCLcBGAs/s800/niyakeru_takuramu_ayashii_man.png",
     );
   }
 
   login(username: string, password: string) {
-    return this.http.post<User>(`${UserService.USERAPI}/login`, {username, password}).pipe(
+    const formData = new FormData();
+    formData.append('username', username);
+    formData.append('password', password);
+    return this.http.post<User>(`${UserService.USERAPI}/login`, formData).pipe(
       map(user => {
         localStorage.setItem('user', JSON.stringify(user));
         this.userSubject.next(user);
