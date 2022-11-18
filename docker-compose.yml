@@ -7,6 +7,7 @@ services:
         - JASYPT_ENCRYPTOR_PWD=$JASYPT_ENCRYPTOR_PWD
     image: stock-chat-app-restful-api
     env_file:
+    container_name: rest-api
       - .env
     environment:
       DATABASE_HOST: postgres_database
