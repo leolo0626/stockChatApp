@@ -7,7 +7,8 @@ RUN npm i
 RUN npm run build
 
 FROM nginx:latest AS ngi
-COPY --from=build /app/dist/stock-chat-app-frontend /usr/share/nginx/html
-COPY /nginx.conf /etc/nginx/conf.d/default.conf
+WORKDIR /usr/share/nginx/html
+RUN rm -rf ./*
+COPY --from=build /app/dist/stock-chat-app-frontend .
 
-EXPOSE 80
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
