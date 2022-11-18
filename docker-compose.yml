@@ -21,7 +21,7 @@ services:
     build: stockChatApp_frontend/.
     image: stock-chat-app-frontend
     ports:
-      - "80:80"
+      - "81:80"
     links:
       - "rest-api"
     depends_on:
