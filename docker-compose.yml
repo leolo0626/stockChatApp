@@ -24,9 +24,9 @@ services:
     ports:
       - "81:80"
     links:
-      - "rest-api"
+      - rest-api
     depends_on:
-      - "rest-api"
+      - rest-api
 
 networks:
   my-network:
