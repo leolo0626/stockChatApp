@@ -6,6 +6,7 @@ services:
       args:
         - JASYPT_ENCRYPTOR_PWD=$JASYPT_ENCRYPTOR_PWD
     image: stock-chat-app-restful-api
+    container_name: rest-api
     env_file:
       - .env
     environment:
@@ -14,6 +15,7 @@ services:
       - "8080:8080"
     networks:
       - my-network
+      - app-network
     external_links:
       - postgres_database
 
@@ -21,10 +23,14 @@ services:
     build: stockChatApp_frontend/.
     image: stock-chat-app-frontend
     ports:
-      - "8081:80"
+      - "4200:80"
+    networks:
+      - app-network
 
 networks:
   my-network:
     external: true
+  app-network:
+    driver: bridge
 
     
