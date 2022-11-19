@@ -24,6 +24,8 @@ services:
     image: stock-chat-app-frontend
     ports:
       - "4200:80"
+    depends_on: 
+      - rest-api
     networks:
       - app-network
 
