@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewEncapsulation } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators, AbstractControl } from '@angular/forms';
+import {FloatLabelType} from '@angular/material/form-field';
 import { UserService } from 'src/app/services/user.service';
 import { first } from 'rxjs/operators';
 
@@ -11,6 +12,9 @@ import { first } from 'rxjs/operators';
   encapsulation: ViewEncapsulation.None
 })
 export class LoginPageComponent implements OnInit {
+  hideRequiredControl = new FormControl(false);
+  floatLabelControl = new FormControl('auto' as FloatLabelType);
+
 
   isRegister: boolean = false;
   isLoading: boolean = false;
@@ -80,6 +84,10 @@ export class LoginPageComponent implements OnInit {
         console.log("Fail to Login");
       }
     });
+  }
+
+  getFloatLabelValue(): FloatLabelType {
+    return this.floatLabelControl.value || 'auto';
   }
 
 }
