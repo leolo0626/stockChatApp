@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+@import './styles/material-theme.scss';
 
 *{
     box-sizing: border-box;
@@ -13,8 +14,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     --global-backgroundColor-primary-black: #242424;
     --global-backgroundColor-secondary-black: #3b3b3b;
     --global-color-primary-black: #dadada;
+    @include angular-material-theme($light-app-theme);
+    @include body-theme($light-app-theme);
 }
 
+.dark-theme {
+    @include angular-material-color($dark-app-theme);
+    @include theme-colors($dark-app-theme);
+}
 
 mat-dialog-container {
     background-color: transparent !important;

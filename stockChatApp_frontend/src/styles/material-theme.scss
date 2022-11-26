@@ -1,0 +1,50 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+
+@mixin body-theme($theme) {
+    $_background: map-get($theme, background);
+    $app-background-color: mat-color($_background, background);
+  
+    body {
+      background-color: $app-background-color;
+    }
+}
+
+@mixin theme-colors($theme) {
+    $_background: map-get($theme, background);
+    $_foreground: map-get($theme, foreground);
+    $_primary: map-get($theme, 'primary');
+    // $_side-bar-bg: map-get($theme, side-bar-bg);
+    $background-color: mat-color($_background, background);
+    $foreground-color: mat-color($_foreground, text);
+    $primary-color: mat-color($_primary);
+    // $side-bar-bg-color: mat-color($_side-bar-bg);
+    --app-background-color: #{$background-color};
+    --app-background-dark-color: #{darken($background-color, 10%)};
+    --app-foreground-color: #{$foreground-color};
+    --app-primary-color: #{$primary-color};
+    // --app-side-bar-bg-color: #{$side-bar-bg-color};
+
+  }
+
+
+$light-app-theme: mat-light-theme((
+        color: (
+                primary: mat-palette($mat-indigo),
+                // side-bar-bg: mat-palette($mat-indigo, 700),
+                accent: mat-palette($mat-pink, A200, A100, A400),
+                warn: mat-palette($mat-red),
+
+        )
+));
+
+$dark-app-theme:  mat-dark-theme((
+        color: (
+                primary: mat-palette($mat-deep-purple, 200),
+                // side-bar-bg: mat-palette($mat-indigo, 700),
+                accent: mat-palette($mat-amber, A400, A100, A700),
+                warn: mat-palette($mat-red)
+        )
+));

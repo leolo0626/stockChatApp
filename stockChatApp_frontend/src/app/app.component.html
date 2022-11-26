@@ -1,5 +1,5 @@
-<ng-template [ngIf]="user">
-    <div class="app-container">
+<ng-template [ngIf]="user" >
+    <div [ngClass]="{'dark-theme': isDarkTheme | async}" class="app-container mat-app-background">
       <app-nav-bar></app-nav-bar>
       <div class="main-container">
     
