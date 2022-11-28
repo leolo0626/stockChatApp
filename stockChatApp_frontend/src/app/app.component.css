@@ -7,6 +7,7 @@
     border: 5px solid #FFFF00;
     display: flex;
     justify-content: center;
+    min-height: 90vh;
 }
 
 .main-container .header {
@@ -18,7 +19,7 @@
 .main-container .right-bottom-pannel{
     position:fixed;
     width:450px;
-    bottom:2px; right:0px;
+    bottom:0px; right:0px;
     z-index:1000;
 }
 
