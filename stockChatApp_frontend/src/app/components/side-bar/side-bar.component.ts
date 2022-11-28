@@ -2,22 +2,22 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ThemeService } from 'src/app/services/theme.service';
 import { UserService } from 'src/app/services/user.service';
-import { Observable, } from 'rxjs';
+import { MatSlideToggleChange } from '@angular/material/slide-toggle';
 
 @Component({
-  selector: 'app-nav-bar',
-  templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.scss']
+  selector: 'app-side-bar',
+  templateUrl: './side-bar.component.html',
+  styleUrls: ['./side-bar.component.scss']
 })
-export class NavBarComponent implements OnInit {
+export class SideBarComponent implements OnInit {
 
   constructor(private router: Router, private userService: UserService, private themeService: ThemeService) { }
 
   ngOnInit(): void {
   }
 
-  toggleDarkTheme(checked: boolean) {
-    this.themeService.setDarkTheme(checked);
+  toggleDarkTheme(event: MatSlideToggleChange) {
+    this.themeService.setDarkTheme(event.checked);
   }
   
   onLogout() {

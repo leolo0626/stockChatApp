@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent implements OnInit{
   title = 'stockChatApp_frontend';
-  isDarkTheme: Observable<boolean>;
+  theme$: Observable<string>;
   user?: User;
   constructor(private userService: UserService, private themeService: ThemeService) {
     this.userService.user.subscribe(x => {
@@ -20,6 +20,6 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit() {
-    this.isDarkTheme = this.themeService.isDarkTheme;
+    this.theme$ = this.themeService.theme$;
   }
 }

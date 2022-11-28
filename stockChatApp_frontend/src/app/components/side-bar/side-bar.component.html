@@ -1,0 +1,42 @@
+<mat-action-list fxLayout="column" fxLayoutAlign="space-between">
+    <div style="font-size:20px; padding: 10px">
+        &#931; Sigma
+    </div>
+    <mat-divider></mat-divider>
+    <section fxFlex="88">
+        <a mat-list-item routerLink="/home" routerLinkActive="active">
+                <mat-icon matListItemIcon>home</mat-icon>
+                <span style="padding:10px; margin-top:3px">Home</span>
+
+        </a>
+        <a mat-list-item routerLink="/profile" routerLinkActive="active">
+            <mat-icon matListItemIcon>badge</mat-icon>
+            <span style="padding:10px; margin-top:3px">Profile</span>
+        </a>
+        <mat-list-item>
+            <mat-icon matListItemIcon>calculate</mat-icon>
+            <span style="padding:10px; margin-top:3px">Option</span>
+        </mat-list-item>
+        <mat-list-item>
+            <mat-icon matListItemIcon>savings</mat-icon>
+            <span style="padding:10px; margin-top:3px">Portfolio</span>
+        </mat-list-item>
+        <mat-list-item >
+            <mat-icon matListItemIcon>rss_feed</mat-icon>
+            <span style="padding:10px; margin-top:3px">Blogs</span>
+        </mat-list-item>
+    </section>
+
+    <section fxFlex="12">
+        <mat-list-item>
+            <mat-icon matListItemIcon>logout</mat-icon>
+            <span style="padding:10px; margin-top:3px">Logout</span>
+        </mat-list-item>
+        <mat-list-item>
+            <mat-slide-toggle (change)="toggleDarkTheme($event)">
+                Dark Mode
+            </mat-slide-toggle>
+        </mat-list-item>
+    </section>
+
+</mat-action-list>

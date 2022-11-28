@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { AppRoutesModule } from './app-routes.module';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { HeaderBarComponent } from './components/header-bar/header-bar.component';
@@ -31,7 +31,7 @@ import { FormFieldComponent } from './components/form-field/form-field.component
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent,
+    SideBarComponent,
     HomePageComponent,
     LoginPageComponent,
     HeaderBarComponent,

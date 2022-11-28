@@ -1,0 +1,17 @@
+@import '../../../styles.scss';
+
+.mat-list-base {
+    height:100vh;
+    overflow-y: none !important;
+    color: var(--app-side-bar-text-color) !important;
+    background-color: var(--app-side-bar-bg-color);
+}
+
+.mat-list-item {
+    color: var(--app-side-bar-text-color) !important;
+}
+
+.mat-list-item:hover {
+    color: var(--app-side-bar-highlight-color) !important;
+} 
+

@@ -22,3 +22,8 @@
     z-index:1000;
 }
 
+.mat-sidenav {
+    width: 150px;
+    position:fixed;
+}
+

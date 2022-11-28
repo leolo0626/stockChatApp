@@ -1,26 +1,32 @@
-<ng-template [ngIf]="user" >
-    <div [ngClass]="{'dark-theme': isDarkTheme | async}" class="app-container mat-app-background">
-      <app-nav-bar></app-nav-bar>
-      <div class="main-container">
-    
-        <div class="header">
-          <app-header-bar></app-header-bar>
+<ng-template [ngIf]="user">
+  <div class="mat-app-background {{ theme$ | async }}">
+    <mat-sidenav-container >
+      <mat-sidenav opened mode="side">
+          <app-side-bar></app-side-bar>
+      </mat-sidenav>
+      <mat-sidenav-container>
+        <div class="main-container">
+
+          <div class="header">
+            <app-header-bar></app-header-bar>
+          </div>
+
+          <div class="center">
+            <router-outlet></router-outlet>
+          </div>
+
+          <div class="right-bottom-pannel">
+            <app-messager-widget></app-messager-widget>
+          </div>
+
         </div>
-    
-        <div class="center">
-          <router-outlet></router-outlet>
-        </div>
-    
-        <div class="right-bottom-pannel">
-          <app-messager-widget></app-messager-widget>
-        </div>
-    
-      </div>
+      </mat-sidenav-container>
+    </mat-sidenav-container>
   </div>
 </ng-template>
 
 <ng-template [ngIf]="!user">
-      <app-login-page>
+  <app-login-page>
 
-      </app-login-page>
+  </app-login-page>
 </ng-template>
