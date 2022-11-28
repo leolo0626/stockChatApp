@@ -41,6 +41,7 @@ export class UserService {
       map(user => {
         localStorage.setItem('user', JSON.stringify(user));
         this.userSubject.next(user);
+        this.router.navigate(['/home']); // may have better solution
         return user;
       })
     )
