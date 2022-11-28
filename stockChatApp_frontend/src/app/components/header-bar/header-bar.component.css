@@ -1,20 +1,15 @@
 .header-bar {
-    background: #fff;
-    color: #717171;
     overflow: hidden;
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 1rem;
     gap:1rem;
-    /* width:100%; */
-    /* padding-left: 100%; */
 }
 
 .ticker-bar {
     display: flex;
     flex-direction: row;
     flex:1;
-    /* padding-right: 100%; */
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;

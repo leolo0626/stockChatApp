@@ -20,6 +20,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; color: blac
 .light-theme {
     @include angular-material-theme($light-app-theme);
     @include theme-colors($light-app-theme);
+    --app-background-color: #fff;
     --app-side-bar-bg-color: #11468F;
     --app-side-bar-highlight-color: #A2D2FF;
     --app-side-bar-text-color: #FFF8F3;
@@ -29,9 +30,19 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; color: blac
 .dark-theme {
     @include angular-material-color($dark-app-theme);
     @include theme-colors($dark-app-theme);
+    --app-background-color: #242424;
+    --app-text-color: #FFF8F3 ;
     --app-side-bar-bg-color: #242424;
     --app-side-bar-highlight-color: #ffc400;
     --app-side-bar-text-color: #FFF8F3;
+}
+
+.price-up {
+    color: #B3FFAE
+}
+
+.price-down {
+    color: #FF6464
 }
 
 mat-dialog-container {

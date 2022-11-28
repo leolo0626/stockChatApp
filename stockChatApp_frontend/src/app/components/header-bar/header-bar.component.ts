@@ -14,7 +14,7 @@ export class HeaderBarComponent implements OnInit {
 
   ngOnInit(): void {
     this.stocks =[
-      new Stock('VIX', 'VXX', 23.06, 6.02, 1.42),
+      new Stock('VIX', 'VXX', 23.06, -1.34, -1.42),
       new Stock('20 Years Treasures', 'TLT', 23.06, 6.02, 1.42),
       new Stock('Nasdaq', 'qqq', 23.06, 6.02, 1.42),
       new Stock('Bitcoin', 'BTC', 23.06, 6.02, 1.42),

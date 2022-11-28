@@ -11,10 +11,10 @@
 
     </div>
     <div>
-        <div>
+        <div [ngClass]="{'price-up': stock.percent >= 0, 'price-down': stock.percent < 0}">
             {{stock.percent}}%
         </div>
-        <div>
+        <div [ngClass]="{'price-up': stock.percent >= 0, 'price-down': stock.percent < 0}">
             {{stock.amount}}
         </div>
     </div>
