@@ -1,0 +1,51 @@
+.mat-expansion-panel-header {
+    background-color: var(--app-side-bar-bg-color) !important;
+    color: var(--app-side-bar-text-color) !important;
+
+}
+
+.mat-expansion-indicator, .mat-expansion-indicator::after {
+    color: var(--app-side-bar-text-color) !important;
+}
+
+.mat-expansion-panel-body {
+    padding:0px !important;
+    overflow: hidden;
+}
+
+
+.mat-expansion-indicator::after {
+    transform: rotate(25deg) !important;
+}
+
+.mat-expansion-indicator::after {
+    transform: rotate(225deg) !important;
+}
+
+.mat-expansion-panel {
+    background-color: var(--app-background-color) !important;
+    overflow: inherit !important;
+}
+
+.mat-expansion-panel-header.mat-expanded {
+    position: sticky;
+    top: 0;
+}
+
+.mat-divider {
+    border-top-color: var(--app-text-color) !important;
+    position: sticky;
+    top: 0;
+}
+
+.mat-list-base {
+    padding-top: 0px !important;
+    overflow-y:scroll; 
+    position:relative;
+    height:40rem;
+    color: var(--app-text-color) !important;
+}
+
+.mat-list-item:hover {
+    color: var(--app-side-bar-highlight-color) !important;
+}
