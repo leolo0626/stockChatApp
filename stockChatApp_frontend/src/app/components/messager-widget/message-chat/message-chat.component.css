@@ -7,15 +7,21 @@
     position:relative;
     padding: 10px;
     overflow: scroll;
-    color: var(--global-color-primary-black)
+    color: var(--app-side-bar-text-color)
 }
 
 
 .chat-input {
     margin-top:8px;
     margin-bottom: 8px;
-    color:var(--global-color-primary-black);
+    color:var(--app-side-bar-text-color);
 
+}
+
+.send-button {
+  color: var(--app-text-color) !important;
+  border:none;
+  background:transparent !important;
 }
 
 #w-input-container {
@@ -24,8 +30,8 @@
     box-sizing: border-box;
     padding: 9px 18px 11px;
     margin: 2px 4px;
-    background-color: var(--global-backgroundColor-secondary-black);
-    border: 1px solid var(--global-color-primary-black);
+    background-color: var(--app-side-bar-bg-color);
+    border: 1px solid var(--app-side-bar-text-color);
     border-radius: 21px;
     display: inline-block;
   }
@@ -35,7 +41,7 @@
   }
   
   .w-placeholder {
-    color: var(--global-color-primary-black);
+    color: var(--app-side-bar-text-color);
     top: 0;
     pointer-events: none;
     user-select: none;
@@ -71,7 +77,4 @@
   #w-input-text:focus {
     padding: 0 6px 0px;
   }
-  
-  .mat-divider {
-    border-top-color: var(--global-color-primary-black)
-}
+

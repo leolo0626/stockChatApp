@@ -7,7 +7,7 @@ import { CreateChatRoomDialog } from '../dialog/create-chat-room-dialog/create-c
 @Component({
   selector: 'app-messager-widget',
   templateUrl: './messager-widget.component.html',
-  styleUrls: ['./messager-widget.component.css'],
+  styleUrls: ['./messager-widget.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class MessagerWidgetComponent implements OnInit {

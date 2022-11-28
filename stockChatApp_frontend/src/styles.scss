@@ -21,6 +21,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; color: blac
     @include angular-material-theme($light-app-theme);
     @include theme-colors($light-app-theme);
     --app-background-color: #fff;
+    --app-text-color:#242424;
     --app-side-bar-bg-color: #11468F;
     --app-side-bar-highlight-color: #A2D2FF;
     --app-side-bar-text-color: #FFF8F3;
