@@ -1,4 +1,5 @@
 import { Roles } from "../enumCollections/enumCollections";
+import { UserProfile } from "./userProfile";
 
 export class User {
     id?: string;
@@ -9,4 +10,5 @@ export class User {
     email!: string;
     token?: string;
     roles?: Array<Roles>;
+    userProfile?: UserProfile;
 }

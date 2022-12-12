@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Person } from 'src/app/model/person';
+import { User } from 'src/app/model/user';
 
 @Component({
   selector: 'app-message',
@@ -23,14 +23,14 @@ type Kind = 'text' | 'image';
 
 interface AnyMessage<T extends Kind, U extends object = {}> {
   roomId: string;
-  user:Person;
+  user: User;
   kind: T;
-  content:U;
+  content: U;
   datetime: Date;
   isUser: boolean;
 }
 
-type TextMessage = AnyMessage<'text', {text: string}>
-type ImageMessage = AnyMessage<'image', {src: string, alt?: string}>
+type TextMessage = AnyMessage<'text', { text: string }>
+type ImageMessage = AnyMessage<'image', { src: string, alt?: string }>
 
 export type Message = TextMessage;

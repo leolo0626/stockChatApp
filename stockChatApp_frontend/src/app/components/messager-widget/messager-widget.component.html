@@ -43,9 +43,9 @@
     <ng-template [ngIf]="!isChat">
       <mat-action-list>
         <button mat-list-item *ngFor="let msg of incomingMessageList" (click)="openChatRoom(msg)"> 
-            <img matListAvatar [src]="msg.user.avatar" alt="...">
+            <img matListAvatar [src]="msg.user.userProfile?.avatar" alt="...">
             <h3 matLine>
-                {{msg.user.name}}
+                {{msg.user.username}}
             </h3>
             <p matLine>
                 <span>{{msg.content.text}}</span>

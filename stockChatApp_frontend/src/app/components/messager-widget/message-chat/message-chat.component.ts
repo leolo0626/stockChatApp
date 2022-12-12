@@ -1,8 +1,8 @@
 import { Component, ElementRef, OnInit, AfterViewChecked, ViewChild } from '@angular/core';
-import { Person } from 'src/app/model/person';
-import {Message} from './message/message.component';
+import { Message } from './message/message.component';
 import { fakePersonDataList } from 'src/app/data/fakePersonData';
 import { UserService } from 'src/app/services/user.service';
+import { Person } from 'src/app/model/person';
 
 @Component({
   selector: 'app-message-chat',
@@ -15,7 +15,7 @@ export class MessageChatComponent implements OnInit, AfterViewChecked {
   @ViewChild('chatInput') private chatInput: ElementRef;
 
   public user: Person;
-  public messageList: Array<Message>  = [];
+  public messageList: Array<Message> = [];
   public messageInput: string;
 
   constructor(private userService: UserService) { }
@@ -28,53 +28,53 @@ export class MessageChatComponent implements OnInit, AfterViewChecked {
         user: fakePersonDataList[0],
         kind: 'text',
         content: {
-          text : 'fsjfhskjfhsakjfhsajfhasdf'
-        }, 
+          text: 'fsjfhskjfhsakjfhsajfhasdf'
+        },
         datetime: new Date(),
         isUser: true
-       },
-       {
+      },
+      {
         roomId: 'abc',
         user: fakePersonDataList[1],
         kind: 'text',
         content: {
-          text : 'fsjfhskjfhsakjfhsajfhasdfdsfsdfdsfdsfdskfhdsjfhdskjfhsdfhdsjkfashdfa'
-        }, 
+          text: 'fsjfhskjfhsakjfhsajfhasdfdsfsdfdsfdsfdskfhdsjfhdskjfhsdfhdsjkfashdfa'
+        },
         datetime: new Date(),
         isUser: false
-       },   
-       {
+      },
+      {
         roomId: 'abc',
         user: fakePersonDataList[0],
         kind: 'text',
         content: {
-          text : 'fsjfhskjfhsakjfhsajfhasdfsfsdhfsjdkfhsdkjfhsdaifhsdakfhsdafashasdflh'
-        }, 
+          text: 'fsjfhskjfhsakjfhsajfhasdfsfsdhfsjdkfhsdkjfhsdaifhsdakfhsdafashasdflh'
+        },
         datetime: new Date(),
         isUser: true
-       },
-       {
+      },
+      {
         roomId: 'abc',
         user: fakePersonDataList[1],
         kind: 'text',
         content: {
-          text : 'fsjfhskjfhsakjfhsajfhasdfsfsdhfsjdkfhsdkjfhsdaifhsdakfhsdafashasdflh'
-        }, 
+          text: 'fsjfhskjfhsakjfhsajfhasdfsfsdhfsjdkfhsdkjfhsdaifhsdakfhsdafashasdflh'
+        },
         datetime: new Date(),
         isUser: false
-       }
+      }
     ]
     this.scrollToBottom();
   }
 
-  ngAfterViewChecked() {        
-    this.scrollToBottom();        
-  } 
+  ngAfterViewChecked() {
+    this.scrollToBottom();
+  }
 
   scrollToBottom(): void {
     try {
-        this.chatContainer.nativeElement.scrollTop = this.chatContainer.nativeElement.scrollHeight;
-    } catch(err) { }                 
+      this.chatContainer.nativeElement.scrollTop = this.chatContainer.nativeElement.scrollHeight;
+    } catch (err) { }
   }
 
 
@@ -87,7 +87,7 @@ export class MessageChatComponent implements OnInit, AfterViewChecked {
   onMessageSend() {
     this.messageList.push({
       roomId: 'abc',
-      user: this.user,
+      user: fakePersonDataList[0],
       kind: 'text',
       content: {
         text: this.messageInput
