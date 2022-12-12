@@ -17,6 +17,7 @@ export class PersonalAvatarWithIdentityDisplayComponent implements OnInit {
 
   constructor() { 
     this.createdAt = new Date();
+  
   }
 
   ngOnInit(): void {

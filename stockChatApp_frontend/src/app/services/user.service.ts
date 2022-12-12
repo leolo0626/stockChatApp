@@ -5,6 +5,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { User } from '../model/user';
 import { fakeUserDataList } from '../data/fakePersonData';
+declare var require: any;
 
 @Injectable({
   providedIn: 'root'

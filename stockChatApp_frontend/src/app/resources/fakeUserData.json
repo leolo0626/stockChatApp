@@ -7,7 +7,7 @@
         "lastName": "lo",
         "email": "leolo@stockchat.com",
         "userProfile": {
-            "avatar": "https://3.bp.blogspot.com/-xT36Kpq_T_E/W1a5CIwueAI/AAAAAAABNjc/nkwOIiInph0FSJ3cpJHdE1Ghu60HX5BfgCLcBGAs/s800/niyakeru_takuramu_ayashii_man.png"
+            "avatar": "assets/avatar/IMG2774.png"
         }
 
     }, 
@@ -19,7 +19,7 @@
         "lastName": "chung",
         "email": "mekochung@stockchat.com",
         "userProfile": {
-            "avatar": "https://1.bp.blogspot.com/-1mAMdaOBddY/VaMN9yDgfBI/AAAAAAAAvgw/dInAeqNXapo/s800/youngwoman_37.png"
+            "avatar": "assets/avatar/IMG2776.png"
         }
 
     }, 
@@ -31,7 +31,7 @@
         "lastName": "chan",
         "email": "popeyechan@stockchat.com",
         "userProfile": {
-            "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPvThbsJRKdRw-JqFhZsCK-09IASZH5bPmRzZFKuDyvXc0Id_f8fJk-OCx-VQbJRgtwgc&usqp=CAU"
+            "avatar": "assets/avatar/IMG2780.png"
         }
     }, 
     {
@@ -42,7 +42,7 @@
         "lastName": "fan",
         "email": "kyfan@stockchat.com",
         "userProfile": {
-            "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa0-5udIGPZj7wv4PsOYdAsXKdqzXL1fJYdQ&usqp=CAU"
+            "avatar": "assets/avatar/IMG2781.png"
         }
     }
 ]
