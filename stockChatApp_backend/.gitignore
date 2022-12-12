@@ -15,6 +15,9 @@ target/
 
 
 postgresql
+/.mvn/
+mvnw
+mvnw.cmd
 ### environment variable ###
 docker/.env
 

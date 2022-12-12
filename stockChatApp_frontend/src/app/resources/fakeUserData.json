@@ -1,0 +1,48 @@
+[
+    {
+        "id": "1",
+        "username": "leolo",
+        "password": "1234",
+        "firstName": "leo",
+        "lastName": "lo",
+        "email": "leolo@stockchat.com",
+        "userProfile": {
+            "avatar": "https://3.bp.blogspot.com/-xT36Kpq_T_E/W1a5CIwueAI/AAAAAAABNjc/nkwOIiInph0FSJ3cpJHdE1Ghu60HX5BfgCLcBGAs/s800/niyakeru_takuramu_ayashii_man.png"
+        }
+
+    }, 
+    {
+        "id": "2",
+        "username": "mekochung",
+        "password": "1234",
+        "firstName": "meko",
+        "lastName": "chung",
+        "email": "mekochung@stockchat.com",
+        "userProfile": {
+            "avatar": "https://1.bp.blogspot.com/-1mAMdaOBddY/VaMN9yDgfBI/AAAAAAAAvgw/dInAeqNXapo/s800/youngwoman_37.png"
+        }
+
+    }, 
+    {
+        "id": "3",
+        "username": "popeyechan",
+        "password": "1234",
+        "firstName": "popeye",
+        "lastName": "chan",
+        "email": "popeyechan@stockchat.com",
+        "userProfile": {
+            "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPvThbsJRKdRw-JqFhZsCK-09IASZH5bPmRzZFKuDyvXc0Id_f8fJk-OCx-VQbJRgtwgc&usqp=CAU"
+        }
+    }, 
+    {
+        "id": "4",
+        "username": "kyfan",
+        "password": "1234",
+        "firstName": "ky",
+        "lastName": "fan",
+        "email": "kyfan@stockchat.com",
+        "userProfile": {
+            "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa0-5udIGPZj7wv4PsOYdAsXKdqzXL1fJYdQ&usqp=CAU"
+        }
+    }
+]
