@@ -1,11 +1,11 @@
 import { ReactionEnum } from '../enumCollections/enumCollections';
-import {Person} from './person';
+import { User } from './user';
 
 export interface IPost {
     id?: string, 
     createdAt: Date;
     content: string;
-    person: Person;
+    user: User;
     likes?: number;
     comments?: Array<IPost>
 }
@@ -16,7 +16,7 @@ export class Post implements IPost {
         public id: string | undefined ,
         public createdAt: Date,
         public content: string,
-        public person: Person, 
+        public user: User, 
         public reactions: PerosnReactions,
         public comments: Array<Comment> = []
         ){}
@@ -29,31 +29,32 @@ export class Post implements IPost {
         return totalCount;
     }
 
-    private _isPostLikedByPersonId(person: Person) :boolean {
-        return person.getPostReaction(this.id!) !== null;
+    private _isPostLikedByPersonId(user: User) :boolean {
+        // return person.getPostReaction(this.id!) !== null;
+        return false;
     }
 
-    private _addReactionToPost(reaction: ReactionEnum, person: Person) {
+    private _addReactionToPost(reaction: ReactionEnum, user: User) {
         if (reaction in this.reactions) {
             this.reactions[reaction] = [
               ...this.reactions[reaction]!,
-              person
+              user
             ];
           } else {
-            this.reactions[reaction] = [person];
+            this.reactions[reaction] = [user];
         }
     }
     
     // upsertReaction : update and insert
-    addReaction(reaction: ReactionEnum, person: Person) { 
-        console.log(person)
-        if (this._isPostLikedByPersonId(person)) {
-            const prevReaction = person.getPostReaction(this.id!);
-            if (prevReaction === reaction) return ;
-            // remove id and add the id 
-            this.reactions[prevReaction!] = [...this.reactions[prevReaction!]!.filter((p: Person) => p.id !== person.id)]
+    addReaction(reaction: ReactionEnum, user: User) { 
+        console.log(user)
+        if (this._isPostLikedByPersonId(user)) {
+            // const prevReaction = user.getPostReaction(this.id!);
+            // if (prevReaction === reaction) return ;
+            // // remove id and add the id 
+            // this.reactions[prevReaction!] = [...this.reactions[prevReaction!]!.filter((p: User) => p.id !== person.id)]
         }
-        this._addReactionToPost(reaction, person)
+        this._addReactionToPost(reaction, user)
     }
 }
 
@@ -62,16 +63,16 @@ export class Comment implements IPost {
         public id: string | undefined,
         public createdAt: Date,
         public content: string,
-        public person: Person, 
+        public user: User, 
     ){}
 }
 
 type PerosnReactions = {
-    [ReactionEnum.LIKE]? : Array<Person>;
-    [ReactionEnum.LOVE]? : Array<Person>;
-    [ReactionEnum.HAHA]? : Array<Person>;
-    [ReactionEnum.YAY]? : Array<Person>;
-    [ReactionEnum.WOW]? : Array<Person>;
-    [ReactionEnum.SAD]? : Array<Person>;
-    [ReactionEnum.ANGRY]? : Array<Person>;
+    [ReactionEnum.LIKE]? : Array<User>;
+    [ReactionEnum.LOVE]? : Array<User>;
+    [ReactionEnum.HAHA]? : Array<User>;
+    [ReactionEnum.YAY]? : Array<User>;
+    [ReactionEnum.WOW]? : Array<User>;
+    [ReactionEnum.SAD]? : Array<User>;
+    [ReactionEnum.ANGRY]? : Array<User>;
 }

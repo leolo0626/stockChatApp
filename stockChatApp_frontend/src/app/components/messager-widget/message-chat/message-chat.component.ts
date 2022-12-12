@@ -1,8 +1,8 @@
 import { Component, ElementRef, OnInit, AfterViewChecked, ViewChild } from '@angular/core';
 import { Message } from './message/message.component';
-import { fakePersonDataList } from 'src/app/data/fakePersonData';
+import { fakeUserDataList } from 'src/app/data/fakePersonData';
 import { UserService } from 'src/app/services/user.service';
-import { Person } from 'src/app/model/person';
+import { User } from 'src/app/model/user';
 
 @Component({
   selector: 'app-message-chat',
@@ -14,7 +14,7 @@ export class MessageChatComponent implements OnInit, AfterViewChecked {
   @ViewChild('scrollMe') private chatContainer: ElementRef;
   @ViewChild('chatInput') private chatInput: ElementRef;
 
-  public user: Person;
+  public user: User;
   public messageList: Array<Message> = [];
   public messageInput: string;
 
@@ -25,7 +25,7 @@ export class MessageChatComponent implements OnInit, AfterViewChecked {
     this.messageList = [
       {
         roomId: 'abc',
-        user: fakePersonDataList[0],
+        user: fakeUserDataList[0],
         kind: 'text',
         content: {
           text: 'fsjfhskjfhsakjfhsajfhasdf'
@@ -35,7 +35,7 @@ export class MessageChatComponent implements OnInit, AfterViewChecked {
       },
       {
         roomId: 'abc',
-        user: fakePersonDataList[1],
+        user: fakeUserDataList[1],
         kind: 'text',
         content: {
           text: 'fsjfhskjfhsakjfhsajfhasdfdsfsdfdsfdsfdskfhdsjfhdskjfhsdfhdsjkfashdfa'
@@ -45,7 +45,7 @@ export class MessageChatComponent implements OnInit, AfterViewChecked {
       },
       {
         roomId: 'abc',
-        user: fakePersonDataList[0],
+        user: fakeUserDataList[0],
         kind: 'text',
         content: {
           text: 'fsjfhskjfhsakjfhsajfhasdfsfsdhfsjdkfhsdkjfhsdaifhsdakfhsdafashasdflh'
@@ -55,7 +55,7 @@ export class MessageChatComponent implements OnInit, AfterViewChecked {
       },
       {
         roomId: 'abc',
-        user: fakePersonDataList[1],
+        user: fakeUserDataList[1],
         kind: 'text',
         content: {
           text: 'fsjfhskjfhsakjfhsajfhasdfsfsdhfsjdkfhsdkjfhsdaifhsdakfhsdafashasdflh'
@@ -87,7 +87,7 @@ export class MessageChatComponent implements OnInit, AfterViewChecked {
   onMessageSend() {
     this.messageList.push({
       roomId: 'abc',
-      user: fakePersonDataList[0],
+      user: fakeUserDataList[0],
       kind: 'text',
       content: {
         text: this.messageInput

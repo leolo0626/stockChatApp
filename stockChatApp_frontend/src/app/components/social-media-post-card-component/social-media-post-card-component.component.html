@@ -2,7 +2,7 @@
     <!-- Personal Display -->
     <section class="post-top">
         <!-- <PersonDisplay data={data} show-icon={true} /> -->
-        <app-personal-avatar-with-identity-display [person]="post.person" [createdAt]="post.createdAt">
+        <app-personal-avatar-with-identity-display [user]="post.user" [createdAt]="post.createdAt">
         </app-personal-avatar-with-identity-display>
 
     </section>
@@ -63,7 +63,7 @@
     <!-- Comment Session -->
     <!-- Your comment session -->
     <div class="comment-input" *ngIf="isShowComment">
-        <app-personal-avatar-with-identity-display [person]="user" [avatarFigureSize]="50"
+        <app-personal-avatar-with-identity-display [user]="user" [avatarFigureSize]="50"
             [isPostIdentifierHidden]="true"></app-personal-avatar-with-identity-display>
         <textarea class="text-comment" placeholder="Write your comment here..."
             [(ngModel)]="newCommentContent"></textarea>

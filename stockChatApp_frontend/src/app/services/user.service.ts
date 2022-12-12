@@ -3,9 +3,8 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Roles } from '../enumCollections/enumCollections';
-import { Person } from '../model/person';
 import { User } from '../model/user';
+import { fakeUserDataList } from '../data/fakePersonData';
 
 @Injectable({
   providedIn: 'root'
@@ -25,12 +24,8 @@ export class UserService {
     this.user = this.userSubject.asObservable();
   }
 
-  getUser(): Person {
-    return new Person(
-      '1',
-      "Leo Lo",
-      "https://3.bp.blogspot.com/-xT36Kpq_T_E/W1a5CIwueAI/AAAAAAABNjc/nkwOIiInph0FSJ3cpJHdE1Ghu60HX5BfgCLcBGAs/s800/niyakeru_takuramu_ayashii_man.png",
-    );
+  getUser(): User {
+    return fakeUserDataList[0];
   }
 
   login(username: string, password: string) {

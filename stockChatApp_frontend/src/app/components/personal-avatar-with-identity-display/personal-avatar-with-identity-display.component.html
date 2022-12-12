@@ -3,13 +3,13 @@
         <ngx-avatar
         [size]="avatarFigureSize"
        name="Haithem Mosbahi" 
-       [src]="person.avatar"></ngx-avatar>
+       [src]="user.userProfile?.avatar"></ngx-avatar>
     </div>
     <div class="post-identifier" *ngIf="!isPostIdentifierHidden">     
         <p>
             <i class="far fa-user"></i>
             <a href="#" class="post-author-link margin-left-half">
-                {{ person.name }}
+                {{ user.username }}
             </a>
         </p>
         <p>

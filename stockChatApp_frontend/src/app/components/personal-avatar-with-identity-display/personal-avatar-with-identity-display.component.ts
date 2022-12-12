@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Person } from '../../model/person';
+import { User } from 'src/app/model/user';
 
 @Component({
   selector: 'app-personal-avatar-with-identity-display',
@@ -10,7 +10,7 @@ export class PersonalAvatarWithIdentityDisplayComponent implements OnInit {
 
   
   @Input() public avatarFigureSize: number = 80;
-  @Input() public person: Person;
+  @Input() public user: User;
   @Input() public createdAt: Date;
   @Input() public isPostIdentifierHidden: boolean = false;
 

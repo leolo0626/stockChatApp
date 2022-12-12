@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { fakePersonDataList } from 'src/app/data/fakePersonData';
+import { fakeUserDataList } from 'src/app/data/fakePersonData';
 import { Message } from './message-chat/message/message.component';
 import { CreateChatRoomDialog } from '../dialog/create-chat-room-dialog/create-chat-room-dialog.component';
 
@@ -22,7 +22,7 @@ export class MessagerWidgetComponent implements OnInit {
     this.incomingMessageList = [
       {
         roomId: '12345',
-        user: fakePersonDataList[0],
+        user: fakeUserDataList[0],
         kind: 'text',
         content: {
           text : 'fsjfhskjfhsakjfhsajfhasdf'
@@ -32,7 +32,7 @@ export class MessagerWidgetComponent implements OnInit {
        },
        {
         roomId: 'abc',
-        user: fakePersonDataList[1],
+        user: fakeUserDataList[1],
         kind: 'text',
         content: {
           text : 'fsjfhskjfhsakjfhsajfhasdfdsfsdfdsfdsfdskfhdsjfhdskjfhsdfhdsjkfashdfa'
