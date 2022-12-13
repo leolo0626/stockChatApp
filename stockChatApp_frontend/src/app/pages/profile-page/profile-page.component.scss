@@ -1,0 +1,42 @@
+.card {
+    background-color: #fff;
+	width: 1000px;
+    height: 600px;
+	border-radius: 33px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: inline-flex;
+    .top {
+        border-radius: 33px 33px 0px 0px;
+        background-image: url('../../../assets/banner/Npl_Catalog_Season01_Lv27.webp');
+        background-size:100% 100%;
+    }
+    
+    .middle {
+        background-color: white;
+        padding-left: 30px;
+        .top-profile-pic {
+            margin-top:-122px;
+            z-index: 4;
+            .photo-wrapper{
+                width: 160px;
+                height: 160px;
+                box-sizing: border-box;
+                border-radius: 49.9%;
+                background-color: #EFF5F5;
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                    border-radius: inherit;
+                }
+            }
+        }
+    }
+
+    .bottom {
+        background-color: #f29263;
+        border-radius: 0px 0px 33px 33px;
+        padding-left: 30px;
+    }
+}
