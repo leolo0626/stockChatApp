@@ -1,16 +1,50 @@
 <div class="card" fxLayout="column">
-	<div class="top" fxFlex="35">
-
+	<div class="top" fxFlex="45">
+		
 	</div>
-	<div class="middle" fxFlex="45" fxLayout="column">
+	<div class="middle" fxFlex="55" fxLayout="column">
 		<div class="top-profile-pic">
 			<div class="photo-wrapper">
 				<img src="{{imagePath}}">
 			</div>
 		</div>
-	</div>
-	<div class="bottom" fxFlex="20">
+		<div fxLayout="row" fxLayoutAlign="end center">
+			<fa-icon [icon]="editIcon" size="lg"></fa-icon> 
+		</div>
+		<div fxLayoutAlign="space-between center" fxLayout="row">
+			<div fxFlex="45">
+				<div>
+					<h2 style="margin:0px;">Leo Lo</h2>
+					<h3 style="margin:0px;">
+						CFA Level III Candidate | Certified FRM | M.Sc. in Risk Management Science and Data Analytics
+					</h3>
+				</div>
+				<div>
+					Central & Western District, Hong Kong SAR
+				</div>
+				<div>
+					<a href="http://www.yahoo.com.hk">230 connections</a>
+				</div>
+				<div>
 
+				</div>
+			</div>
+			<div fxFlex="20">
+				<div fxLayout="column"  fxLayoutGap="10px">
+					<div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+						<fa-icon [icon]="facebookIcon" size="2x"></fa-icon>
+						<div>Facebook</div>
+					</div>
+					<div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+						<fa-icon [icon]="twitterIcon" size="2x"></fa-icon> 
+						<div>Twitter</div>
+					</div>
+					<div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+						<fa-icon [icon]="linkedinIcon" size="2x"></fa-icon> 
+						<div>Linkedin</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-
 </div>

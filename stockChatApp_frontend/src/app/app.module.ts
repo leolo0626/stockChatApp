@@ -27,6 +27,8 @@ import { CreateChatRoomDialog } from './components/dialog/create-chat-room-dialo
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { FormFieldComponent } from './components/form-field/form-field.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 @NgModule({
   declarations: [
@@ -59,7 +61,8 @@ import { FormFieldComponent } from './components/form-field/form-field.component
     ReactiveFormsModule,
     MentionModule,
     NgxEditorModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
