@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 
 @Component({
@@ -15,11 +15,37 @@ export class EditProfilePicDialogComponent implements OnInit {
         "assets/avatar/IMG2780.png",
         "assets/avatar/IMG2781.png",
         "assets/avatar/IMG2784.png",
+
+        "assets/avatar/IMG2774.png",
+        "assets/avatar/IMG2776.png",
+        "assets/avatar/IMG2780.png",
+        "assets/avatar/IMG2781.png",
+        "assets/avatar/IMG2784.png",
+
+        "assets/avatar/IMG2774.png",
+        "assets/avatar/IMG2776.png",
+        "assets/avatar/IMG2780.png",
+        "assets/avatar/IMG2781.png",
+        "assets/avatar/IMG2784.png",
+
+        "assets/avatar/IMG2774.png",
+        "assets/avatar/IMG2776.png",
+        "assets/avatar/IMG2780.png",
+        "assets/avatar/IMG2781.png",
+        "assets/avatar/IMG2784.png",
     ]
-    constructor(@Inject(MAT_DIALOG_DATA) public data: any) {
+    constructor(@Inject(MAT_DIALOG_DATA) public data: any, public dialogRef: MatDialogRef<EditProfilePicDialogComponent>) {
         this.imagePath = this.data.imagePath;
     }
 
     ngOnInit(): void {}
+
+    onSelectProfilePic(targetImagePath: any) {
+        this.imagePath = targetImagePath;
+    }
+
+    onSave() {
+        this.dialogRef.close(this.imagePath);
+    }
 }
 

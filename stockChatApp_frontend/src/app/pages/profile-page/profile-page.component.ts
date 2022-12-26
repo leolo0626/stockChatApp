@@ -45,7 +45,11 @@ export class ProfilePageComponent implements OnInit {
         data: {
           imagePath: this.imagePath
         }
-      })
+      });
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.userService.saveProfilePic(result);
+      }
+    });
   }
-
 }

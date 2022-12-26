@@ -29,6 +29,10 @@ export class UserService {
     return fakeUserDataList[0];
   }
 
+  saveProfilePic(profilePic: string) {
+    
+  }
+
   login(username: string, password: string) {
     const formData = new FormData();
     formData.append('username', username);
