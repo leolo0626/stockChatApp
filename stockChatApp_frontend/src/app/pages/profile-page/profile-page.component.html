@@ -4,12 +4,12 @@
 	</div>
 	<div class="middle" fxFlex="55" fxLayout="column">
 		<div class="top-profile-pic">
-			<div class="photo-wrapper">
+			<div class="photo-wrapper" (click)="openEditProfilePicDialog()">
 				<img src="{{imagePath}}">
 			</div>
 		</div>
 		<div fxLayout="row" fxLayoutAlign="end center">
-			<fa-icon [icon]="editIcon" size="lg"></fa-icon> 
+			<fa-icon mat-raised-button [icon]="editIcon" size="lg" (click)="openEditProfileDialog()"></fa-icon> 
 		</div>
 		<div fxLayoutAlign="space-between center" fxLayout="row">
 			<div fxFlex="45">

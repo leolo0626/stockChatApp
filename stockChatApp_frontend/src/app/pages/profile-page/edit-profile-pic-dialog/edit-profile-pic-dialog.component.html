@@ -1,0 +1,17 @@
+<h2 mat-dialog-title>Your Avatar</h2>
+<mat-dialog-content class="mat-typography">
+    <div fxLayout="row" fxLayoutAlign="center center">
+        <div class="photo-wrapper" >
+            <img src="{{imagePath}}">
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+    <div fxLayout="row wrap" fxLayoutAlign="start center">
+        <div *ngFor="let image of defaultImageList" class="photo-wrapper-2" >
+            <img src="{{image}}">
+        </div>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Save</button>
+</mat-dialog-actions>

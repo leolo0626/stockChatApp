@@ -28,6 +28,9 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { FormFieldComponent } from './components/form-field/form-field.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { EditProfilePageDialogComponent } from './pages/profile-page/edit-profile-page-dialog/edit-profile-page-dialog.component';
+import { EditProfilePicDialogComponent } from './pages/profile-page/edit-profile-pic-dialog/edit-profile-pic-dialog.component';
+
 
 
 @NgModule({
@@ -39,6 +42,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HeaderBarComponent,
     TickerCardForHeaderBarComponent,
     ProfilePageComponent,
+    EditProfilePageDialogComponent,
+    EditProfilePicDialogComponent,
     SocialMediaPostCardComponentComponent,
     PersonalAvatarWithIdentityDisplayComponent,
     SocialMediaPostCardCommentComponentComponent,
